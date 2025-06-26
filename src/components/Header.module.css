@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  z-index: 1000;
+  padding: 8px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+  top: -100px;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.left {
+  margin-left: 20px;
+}
+
+.right {
+  margin-right: 60px;
+}
+
+.left a,
+.right a {
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.left a:hover,
+.right a:hover {
+  color: orange;
+}

@@ -1,0 +1,56 @@
+.pavilionSection {
+  background-color: #111;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  color: #ff6a00;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.imageBox {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.textBox {
+  max-width: 500px;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Vista escritorio: imagen y texto en horizontal */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textBox {
+    margin-left: 30px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
