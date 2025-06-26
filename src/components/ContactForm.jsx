@@ -26,14 +26,18 @@ export default function ContactForm() {
           <div className={styles.buttonWrapper}>
             <button type="submit" className={styles.button}>Enviar</button>
           </div>
+
         </form>
 
         <div className={styles.mapBox}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.173116126289!2d2.118488!3d41.381901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498a2f51a3a3f%3A0x50a1456e4b85dc89!2sPoliesportiu%20Ar%C3%ADstides%20Maillol!5e0!3m2!1ses!2ses!4v1719400000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.665751111211!2d2.117118174796338!3d41.38134619637175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f61c685557%3A0x1b76e51044aa9154!2sCamp%20de%20futbol%20sala%20CEM%20Ar%C3%ADstides%20Maillol!5e0!3m2!1sca!2ses!4v1750974221303!5m2!1sca!2ses"
             width="100%"
             height="300"
-            style={{ border: 0 }}
+            style={{
+              border: 0,
+              borderRadius: '8px',
+            }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

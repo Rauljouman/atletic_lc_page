@@ -1,9 +1,11 @@
 .pavilionSection {
   background-color: #111;
-  padding: 40px 20px;
+  padding: 40px 50px;
+  font-family: 'Rajdhani', sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  gap: 40px;
 }
 
 .title {
@@ -11,20 +13,25 @@
   font-size: 2.2rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: -20px;
-  margin-top: -5px;
+  width: 100%;
 }
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 
 .imageBox {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 270px;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -32,25 +39,9 @@
 }
 
 .textBox {
-  max-width: 500px;
+  max-width: 600px;
   font-size: 1rem;
   color: white;
   line-height: 1.6;
   text-align: left;
-}
-
-@media (min-width: 768px) {
-  .content {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .textBox {
-    margin-left: 30px;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
 }

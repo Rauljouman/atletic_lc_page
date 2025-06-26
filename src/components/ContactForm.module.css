@@ -1,43 +1,38 @@
 .contactSection {
-  padding: 10px 50px;
-  background-color: #2a2a2a;
-  color: #222;
+  padding: 50px;
+  background-color: #222;
+  color: white;
   text-align: center;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #f57c00;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #f57b00d8;
   margin-bottom: 40px;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
-  margin-bottom: -5px;
-  gap: 50px;
-  margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .form {
   flex: 1;
   max-width: 500px;
   min-width: 300px;
-  margin-left: 30px;
   text-align: left;
 }
 
@@ -53,10 +48,10 @@
   background: #2a2a2a;
   border: 2px solid #f57c00;
   border-radius: 5px;
-  color: #222;
+  color: white;
   outline: none;
   font-size: 1rem;
-  resize: none; 
+  resize: none;
 }
 
 .inputGroup label {
@@ -65,7 +60,7 @@
   left: 12px;
   transform: translateY(-50%);
   padding: 0 5px;
-  color: #888;
+  color: #aaa;
   transition: 0.2s ease;
   pointer-events: none;
 }
@@ -80,29 +75,31 @@
   color: #f57c00;
 }
 
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .button {
   background-color: #f57c00;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 30px;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  color: 2a2a2a;
+  color: white;
   transition: background 0.3s ease;
+  font-family: 'Rajdhani', sans-serif;  
 }
 
 .button:hover {
   background-color: #ffa733;
 }
 
-.buttonWrapper {
-  display: flex;
-  justify-content: center;
-}
-
 .mapBox {
   flex: 1;
   max-width: 500px;
   height: 300px;
-  padding-right: 30px;
+  padding-top: 10px;
+  border-radius: 10%;
 }

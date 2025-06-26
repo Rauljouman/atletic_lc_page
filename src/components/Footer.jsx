@@ -14,7 +14,7 @@ export default function Footer() {
         >
           Carrer de Martí i Franquès, 17‑21
         </a>
-        <span> | </span>
+        <span> || </span>
         <a href="tel:+34678677719" title="Teléfono">678 67 77 19</a>
       </div>
     </footer>
