@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${!showHeader ? styles.hidden : ""}`}>
       <div className={styles.left}>
-                <Image src={Logo} alt="Escudo Atletic Les Corts" width={50} height={50} />
+        <Image src={Logo} alt="Escudo Atletic Les Corts" width={50} height={50} />
         <a href="https://www.instagram.com/atlescortsfs/" target="_blank" rel="noopener noreferrer" title="Instagram">
           <FontAwesomeIcon icon={faInstagramBrand} />
         </a>

@@ -1,0 +1,30 @@
+.footer {
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 20px 40px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  text-align: left;
+}
+
+.right {
+  flex: 1;
+  text-align: right;
+}
+
+.right a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.right a:hover {
+  color: #d9730d;
+}

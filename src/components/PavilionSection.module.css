@@ -12,6 +12,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: -20px;
+  margin-top: -5px;
 }
 
 .content {
@@ -38,7 +39,6 @@
   text-align: left;
 }
 
-/* Vista escritorio: imagen y texto en horizontal */
 @media (min-width: 768px) {
   .content {
     flex-direction: row;
