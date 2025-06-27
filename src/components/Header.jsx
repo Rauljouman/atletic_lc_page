@@ -1,5 +1,5 @@
 "use client";
-
+import Link from 'next/link';
 import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
@@ -43,10 +43,10 @@ export default function Header() {
       </div>
 
       <nav className={styles.right}>
-        <a href="#inicio">Inicio</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#historia">Historia</a>
-        <a href="#contacto">Contacto</a>
+        <Link href="/" className={styles.navLink}>Inicio</Link>
+        <Link href="/teams" className={styles.navLink}>Equipos</Link>
+        <Link href="/aboutUs" className={styles.navLink}>Sobre nosotros</Link>
+        <Link href="/contact" className={styles.navLink}>Contacto</Link>
       </nav>
     </header>
   );
