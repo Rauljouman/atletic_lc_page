@@ -1,6 +1,15 @@
+
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
