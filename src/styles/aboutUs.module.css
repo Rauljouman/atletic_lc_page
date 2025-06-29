@@ -91,6 +91,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 0;
+    gap: 5px;
   }
 
   .column {
@@ -134,5 +135,10 @@
 
   .list {
     padding-left: 10px;
+  }
+
+  .goalsGrid{
+    gap: 5px;
+
   }
 }
