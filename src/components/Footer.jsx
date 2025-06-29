@@ -4,7 +4,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.left}>
-        © 2025 Atletic Les Corts. Todos los derechos reservados.
+        © 2025 Atletic Les Corts.         
+        <br></br>
+        Todos los derechos reservados.
       </div>
       <div className={styles.right}>
         <a
@@ -14,7 +16,7 @@ export default function Footer() {
         >
           Carrer de Martí i Franquès, 17‑21
         </a>
-        <span> || </span>
+        <br></br>
         <a href="tel:+34678677719" title="Teléfono">678 67 77 19</a>
       </div>
     </footer>
