@@ -45,3 +45,11 @@
   line-height: 1.6;
   text-align: left;
 }
+
+@media (max-width: 767px) {
+  .imageBox{
+    width: 90%; 
+    margin: 0 auto;
+    display: block;
+  }
+}

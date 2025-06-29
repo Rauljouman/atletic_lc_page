@@ -1,5 +1,5 @@
 .header {
-  background-color: #1a1a1a !important;
+  background-color: #1a1a1a;
   position: fixed;
   top: 0;
   width: 100%;
@@ -9,12 +9,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: top 0.3s ease;
+  transition: opacity 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .hidden {
-  top: -100px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .left,
@@ -43,4 +44,96 @@
 .left a:hover,
 .right a:hover {
   color: orange;
+}
+
+@media (max-width: 767px) {
+  .right {
+    display: none;
+  }
+
+  .mobileMenuToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2001;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    top: 8px;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    z-index: 2000;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .mobileMenu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobileMenu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .mobileMenu a:hover {
+    color: orange;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .closeButton:hover {
+    color: orange;
+  }
 }
