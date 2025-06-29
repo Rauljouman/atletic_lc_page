@@ -52,17 +52,17 @@
   }
 
   .mobileMenuToggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 2001;
-    background-color: transparent;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  top: 19px;
+  z-index: 2001;
+  background-color: transparent;
+  cursor: pointer;
+}
 
   .hamburger {
     width: 25px;
@@ -135,5 +135,11 @@
 
   .closeButton:hover {
     color: orange;
+  }
+
+  .header {
+    top: 0 !important;
+    opacity: 1 !important;
+    pointer-events: auto;
   }
 }

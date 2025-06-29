@@ -103,3 +103,22 @@
   padding-top: 10px;
   border-radius: 10%;
 }
+
+@media (max-width: 767px) {
+  .contactSection{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .form{
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin-right: 22px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+}

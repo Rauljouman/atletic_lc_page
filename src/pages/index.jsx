@@ -5,11 +5,11 @@ import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
-    <>
+    <div className="sectionWrapper">
       <GroupSection />
-      <PavilionSection /> 
+      <PavilionSection />
       <ContactForm />
       <Footer />
-    </>
+    </div>
   );
 }

@@ -13,29 +13,34 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY) {
-      setShowHeader(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const isMobile = window.innerWidth <= 767;
+      if (isMobile) {
+        setShowHeader(true); // Siempre visible en móvil
+        return;
+      }
+
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('noScroll');
     } else {
-      setShowHeader(true);
+      document.body.classList.remove('noScroll');
     }
-    setLastScrollY(currentScrollY);
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [lastScrollY]);
-
-useEffect(() => {
-  if (menuOpen) {
-    document.body.classList.add('noScroll');
-  } else {
-    document.body.classList.remove('noScroll');
-  }
-}, [menuOpen]);
-
+  }, [menuOpen]);
 
   return (
     <>
