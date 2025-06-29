@@ -1,8 +1,19 @@
 import styles from "./ContactForm.module.css";
-import Logo from "../assets/logo.png";
-import Image from "next/image";
+import { useRef } from "react";
+
 
 export default function ContactForm() {
+
+  const formRef = useRef(null);
+
+  const handleSubmit = () => {
+    setTimeout(() => {
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    }, 100); 
+  };
+
   return (
     <section className={styles.contactSection} id="contacto">
       <h2 className={styles.title}>Contacta con nosotros</h2>
@@ -10,23 +21,33 @@ export default function ContactForm() {
         Si tienes alguna duda, consulta o simplemente quieres saludar, escríbenos por aquí.
       </p>
       <div className={styles.container}>
-        <form className={styles.form} autoComplete="off">
+        <form className={styles.form} 
+          autoComplete="on"
+          action="https://formsubmit.co/rauljouman@gmail.com" 
+          method="POST"
+          ref={formRef}
+          onSubmit={handleSubmit}
+        >
           <div className={styles.inputGroup}>
-            <input type="text" required placeholder=" " />
+            <input type="text" name="Nombre" placeholder=" " required />
             <label>Nombre</label>
           </div>
+
           <div className={styles.inputGroup}>
-            <input type="email" required placeholder=" " />
+            <input type="email" name="Email usado" placeholder=" " required />
             <label>Email</label>
           </div>
           <div className={styles.inputGroup}>
-            <textarea rows="4" required placeholder=" "></textarea>
+            <textarea name="Mensaje" placeholder=" " required></textarea>
             <label>Mensaje</label>
-          </div >
+          </div>
           <div className={styles.buttonWrapper}>
             <button type="submit" className={styles.button}>Enviar</button>
           </div>
-
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="¡Nuevo mensaje desde tu web! 📨"/>
+          <input type="hidden" name="_blacklist" value="email,name"/>
+          <input type="hidden" name="_next" value="https://www.instagram.com/atlescortsfs/?hl=es" />
         </form>
 
         <div className={styles.mapBox}>
