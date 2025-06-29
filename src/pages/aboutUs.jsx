@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer"
 import styles from "@/styles/aboutUs.module.css"
 
-export default function AboutUs() {
+export default function aboutUs() {
   return (
     <div>
       <section className={styles.aboutUsSection}>

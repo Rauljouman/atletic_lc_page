@@ -109,14 +109,19 @@
   }
 }
 
-/* MÓVIL */
 @media (max-width: 767px) {
   .aboutUsSection,
   .aboutGoalSection {
     padding: 40px 20px;
   }
 
-  .title,
+  .title {
+    margin-top: 100px;
+    font-size: 2rem;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
   .title2 {
     font-size: 2rem;
     margin-top: 40px;
