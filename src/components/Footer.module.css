@@ -29,3 +29,9 @@
 .right a:hover {
   color: #d9730d;
 }
+
+@media (max-width: 767px) {
+  .footer{
+    font-size: 0.8em;
+  }
+}
