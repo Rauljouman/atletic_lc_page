@@ -6,7 +6,7 @@ export default function TeamModal({ equipo, cerrar }) {
       <div className={styles.modal} onClick={e => e.stopPropagation()}>
         <button onClick={cerrar} className={styles.cerrar}>✕</button>
         <img src={equipo.image} alt={equipo.nombre} className={styles.img} />
-        <h2>{equipo.nombre}</h2>
+        <h2 className="title">{equipo.nombre}</h2>
       </div>
     </div>
   );
