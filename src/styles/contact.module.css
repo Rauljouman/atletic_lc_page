@@ -3,13 +3,13 @@
   flex-direction: column;
   min-height: 100vh;
   padding: 20px; 
-  background-color: #f0f0f0;
+  background-color: #222;
   color: #333; 
 }
 
 .contentWrapper {
   flex-grow: 1;
-}/* src/styles/contact.module.css */
+}
 
 .section {
   display: flex;
