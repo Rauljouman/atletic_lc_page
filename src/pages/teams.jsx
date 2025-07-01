@@ -4,7 +4,7 @@ import styles from "@/styles/Teams.module.css";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase/firebaseConfig"; 
-import TeamCard from "@/components/TeamCard"; 
+import TeamCard from "@/components/TeamCard";
 
 export default function Teams() {
   const [teams, setTeams] = useState([]);
@@ -30,6 +30,7 @@ export default function Teams() {
 
   return (
     <div className={styles.teamsSection}>
+      <h2 className={styles.title}>Contacta con nosotros</h2>
       <div className={styles.filtros}>
         <input
           type="text"

@@ -4,8 +4,8 @@ import styles from "@/styles/contact.module.css";
 
 export default function contact() {
   return (
-    <div className={styles.section}>
-      <div className={styles.contentWrapper}>
+    <div>
+      <div className={styles.section}>
         <ContactForm />
       </div>
       <Footer />
