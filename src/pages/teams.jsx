@@ -1,10 +1,12 @@
+// /src/pages/teams.jsx
 "use client";
 
 import styles from "@/styles/Teams.module.css";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/firebase/firebaseConfig";
-import TeamCard from "@/components/TeamCard";
+import { db } from "@/firebase/firebaseConfig"; 
+import TeamCard from "@/components/TeamCard"; 
+import TeamModal from "@/components/TeamModal";
 
 export default function Teams() {
   const [teams, setTeams] = useState([]);
@@ -13,12 +15,15 @@ export default function Teams() {
 
   useEffect(() => {
     const fetchTeams = async () => {
-      const querySnapshot = await getDocs(collection(db, "teams"));
-      const data = querySnapshot.docs.map(doc => doc.data());
+      const querySnapshot = await getDocs(collection(db, "equipos"));
+      const data = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data() 
+      }));
       setTeams(data);
     };
     fetchTeams();
-  }, []);
+  }, []); 
 
   const equiposFiltrados = teams.filter(team =>
     (!filtroCategoria || team.categoria === filtroCategoria) &&
