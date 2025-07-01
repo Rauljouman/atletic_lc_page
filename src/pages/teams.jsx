@@ -1,12 +1,10 @@
-// /src/pages/teams.jsx
 "use client";
 
-import styles from "@/styles/teams.module.css";
+import styles from "@/styles/Teams.module.css";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase/firebaseConfig"; 
 import TeamCard from "@/components/TeamCard"; 
-import TeamModal from "@/components/TeamModal";
 
 export default function Teams() {
   const [teams, setTeams] = useState([]);
