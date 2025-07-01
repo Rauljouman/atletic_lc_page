@@ -8,10 +8,13 @@
 
 .filtros {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .filtros input,
@@ -22,6 +25,12 @@
   outline: none;
   font-size: 1rem;
   width: 250px;
+  background-color: #333;
+  color: white;
+}
+
+.filtros select {
+    height: 42px;
 }
 
 .grid {
