@@ -17,7 +17,7 @@ export default function Header() {
     const handleScroll = () => {
       const isMobile = window.innerWidth <= 767;
       if (isMobile) {
-        setShowHeader(true); // Siempre visible en móvil
+        setShowHeader(true);
         return;
       }
 
