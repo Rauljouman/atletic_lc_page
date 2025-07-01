@@ -30,8 +30,8 @@ export default function Teams() {
 
   return (
     <div className={styles.teamsSection}>
-      <h2 className={styles.title}>Contacta con nosotros</h2>
       <div className={styles.filtros}>
+        <h2 className={styles.title}>Contacta con nosotros</h2>
         <input
           type="text"
           placeholder="Buscar por nombre..."
