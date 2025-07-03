@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/components/Footer"
 import styles from "@/styles/Teams.module.css";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
@@ -32,7 +31,7 @@ export default function Teams() {
     <div className={styles.teamsSection}>
       <div className={styles.filtros}>
         <h2 className={styles.title}>Nuestros equipos</h2>
-        <div className={styles.searchAndFilter}> {/* This div groups the input and select */}
+        <div className={styles.searchAndFilter}> 
           <input
             type="text"
             placeholder="Buscar por nombre..."
@@ -53,7 +52,6 @@ export default function Teams() {
           <TeamCard key={team.id} equipo={team} />
         ))}
       </div>
-      <Footer/>
     </div>
   );
 }

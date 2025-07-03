@@ -9,7 +9,6 @@ export default function Home() {
       <GroupSection />
       <PavilionSection />
       <ContactForm />
-      <Footer />
     </div>
   );
 }

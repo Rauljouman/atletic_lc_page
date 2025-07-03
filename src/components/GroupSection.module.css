@@ -30,3 +30,8 @@
   margin-top: 10px;
 }
 
+@media (max-width: 767px) {
+  .title {
+    margin-top: 67px;
+  }
+}

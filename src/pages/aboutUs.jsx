@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer"
 import styles from "@/styles/aboutUs.module.css"
 
 export default function aboutUs() {
@@ -52,8 +51,6 @@ export default function aboutUs() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
