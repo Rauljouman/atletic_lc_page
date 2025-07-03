@@ -5,7 +5,7 @@ import Image from "next/image";
 const images = [
   { src: "/assets/SeniorA_photo.jpg", alt: "Equipo Sénior A del Atletic Les Corts Futsal" },
   { src: "/assets/JuvenilA_photo.jpg", alt: "Equipo Juvenil A del Atletic Les Corts Futsal" },
-  { src: "/assets/pavilion.jpg", alt: "Pabellón deportivo del club Atletic Les Corts" }
+  { src: "/assets/Pavilion.jpg", alt: "Pabellón deportivo del club Atletic Les Corts" }
 ];
 
 export default function GroupSection() {
