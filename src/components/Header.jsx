@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram as faInstagramBrand } from "@fortawesome/free-brands-svg-icons";
 import styles from "./Header.module.css";
-import Logo from "../assets/logo.png";
 
 const NAV_LINKS = [
   { href: "/", label: "Inicio" },
@@ -34,40 +33,65 @@ export default function Header() {
   return (
     <>
       {isMobile && (
-        <div className={styles.mobileMenuToggle} onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className={styles.mobileMenuToggle}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menú"
+        >
           <div className={styles.hamburger}></div>
         </div>
       )}
 
-      <div className={`${styles.mobileMenu} ${menuOpen ? styles.active : ""}`}>
-        <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>✕</button>
+      <nav
+        className={`${styles.mobileMenu} ${menuOpen ? styles.active : ""}`}
+        aria-label="Menú móvil"
+      >
+        <button
+          className={styles.closeButton}
+          onClick={() => setMenuOpen(false)}
+          aria-label="Cerrar menú"
+        >
+          ✕
+        </button>
         {NAV_LINKS.map(({ href, label }) => (
           <Link key={href} href={href} className={styles.navLink} onClick={() => setMenuOpen(false)}>
             {label}
           </Link>
         ))}
-      </div>
+      </nav>
 
       <header className={styles.header}>
         <div className={styles.left}>
-          <Image src={Logo} alt="Escudo Atletic Les Corts" width={50} height={50} />
-          <a href="https://www.instagram.com/atlescortsfs/" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <Link href="/" aria-label="Ir a la página de inicio">
+            <Image
+              src="/assets/logo.png"
+              alt="Escudo Atletic Les Corts"
+              width={isMobile ? 40 : 60}
+              height={isMobile ? 40 : 60}
+            />
+          </Link>
+          <a
+            href="https://www.instagram.com/atlescortsfs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
             <FontAwesomeIcon icon={faInstagramBrand} />
           </a>
-          <a href="mailto:cscfutsal2017@gmail.com" title="Email">
+          <a href="mailto:cscfutsal2017@gmail.com" title="Correo electrónico">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
           <a href="tel:+34678677719" title="Teléfono">
             <FontAwesomeIcon icon={faPhone} />
           </a>
         </div>
-        <div className={styles.right}>
+        <nav className={styles.right} aria-label="Navegación principal">
           {NAV_LINKS.map(({ href, label }) => (
             <Link key={href} href={href} className={styles.navLink}>
               {label}
             </Link>
           ))}
-        </div>
+        </nav>
       </header>
     </>
   );

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from "./GroupSection.module.css";
+import Image from "next/image";
 
 const images = [
-  "/assets/SeniorA_photo.jpg",
-  "/assets/JuvenilA_photo.jpg",
-  "/assets/pavilion.jpg"
+  { src: "/assets/SeniorA_photo.jpg", alt: "Equipo Sénior A del Atletic Les Corts Futsal" },
+  { src: "/assets/JuvenilA_photo.jpg", alt: "Equipo Juvenil A del Atletic Les Corts Futsal" },
+  { src: "/assets/pavilion.jpg", alt: "Pabellón deportivo del club Atletic Les Corts" }
 ];
 
 export default function GroupSection() {
@@ -15,17 +16,20 @@ export default function GroupSection() {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <section className={styles.groupSection}>
       <h1 className={styles.title}>Atletic Les Corts</h1>
       <div className={styles.photoBox}>
-        <img
-          src={images[currentImage]}
-          alt="Foto equipo"
+        <Image
+          src={images[currentImage].src}
+          alt={images[currentImage].alt}
+          style={{ objectFit: "cover" }}
           className={styles.photo}
+          width={600}
+          height={400}
         />
       </div>
       <p className={styles.slogan}>

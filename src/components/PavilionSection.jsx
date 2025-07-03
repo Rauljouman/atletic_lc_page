@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./PavilionSection.module.css";
-import Campo from "../assets/campo.jpg";
 
 export default function PavilionSection() {
   return (
@@ -10,7 +9,7 @@ export default function PavilionSection() {
       <div className={styles.content}>
         <div className={styles.imageBox}>
           <Image
-            src={Campo}
+            src="/assets/campo.jpg"
             alt="Campo de fútbol"
             fill
             style={{ objectFit: "cover", borderRadius: 8 }}
