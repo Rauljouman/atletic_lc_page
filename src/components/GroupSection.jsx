@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import styles from "./GroupSection.module.css";
 
 const images = [
-  "/images/equipo1.jpg",
-  "/images/equipo2.jpg",
+  "/assets/SeniorA_photo.jpg",
+  "/assets/JuvenilA_photo.jpg",
+  "/assets/pavilion.jpg"
 ];
 
 export default function GroupSection() {
@@ -14,7 +15,7 @@ export default function GroupSection() {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
-    return () => clearInterval(interval); // limpieza del intervalo
+    return () => clearInterval(interval); 
   }, []);
 
   return (
