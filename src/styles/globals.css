@@ -23,3 +23,7 @@ body.noScroll {
 .content-wrapper {
   flex-grow: 1;
 }
+
+main{
+  background-color: #2a2a2a;
+}

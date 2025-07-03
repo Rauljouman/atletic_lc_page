@@ -43,6 +43,7 @@ export default function Teams() {
             <option value="Senior">Senior</option>
             <option value="Juvenil">Juvenil</option>
             <option value="Cadete">Cadete</option>
+            <option value="Infantil">Infantil</option>
           </select>
         </div>
       </div>
