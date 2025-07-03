@@ -1,5 +1,5 @@
 "use client";
-
+import Footer from "@/components/Footer"
 import styles from "@/styles/Teams.module.css";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
@@ -31,19 +31,21 @@ export default function Teams() {
   return (
     <div className={styles.teamsSection}>
       <div className={styles.filtros}>
-        <h2 className={styles.title}>Contacta con nosotros</h2><br></br>
-        <input
-          type="text"
-          placeholder="Buscar por nombre..."
-          value={busqueda}
-          onChange={e => setBusqueda(e.target.value)}
-        />
-        <select onChange={e => setFiltroCategoria(e.target.value)} value={filtroCategoria}>
-          <option value="">Todas las categorías</option>
-          <option value="Sénior">Sénior</option>
-          <option value="Juvenil">Juvenil</option>
-          <option value="Cadete">Cadete</option>
-        </select>
+        <h2 className={styles.title}>Nuestros equipos</h2>
+        <div className={styles.searchAndFilter}> {/* This div groups the input and select */}
+          <input
+            type="text"
+            placeholder="Buscar por nombre..."
+            value={busqueda}
+            onChange={e => setBusqueda(e.target.value)}
+          />
+          <select onChange={e => setFiltroCategoria(e.target.value)} value={filtroCategoria}>
+            <option value="">Todas las categorías</option>
+            <option value="Senior">Senior</option>
+            <option value="Juvenil">Juvenil</option>
+            <option value="Cadete">Cadete</option>
+          </select>
+        </div>
       </div>
 
       <div className={styles.grid}>
@@ -51,6 +53,7 @@ export default function Teams() {
           <TeamCard key={team.id} equipo={team} />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 }

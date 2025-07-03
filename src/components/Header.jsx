@@ -7,32 +7,21 @@ import Logo from "../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram as faInstagramBrand } from "@fortawesome/free-brands-svg-icons";
+import useScrollDirection from "./useScrollDirection";
 
 export default function Header() {
-  const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const scrollDirection = useScrollDirection();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const isMobile = window.innerWidth <= 767;
-      if (isMobile) {
-        setShowHeader(true);
-        return;
-      }
+    const handleResize = () => setIsMobile(window.innerWidth <= 767);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        setShowHeader(false);
-      } else {
-        setShowHeader(true);
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  const showHeader = isMobile || scrollDirection === "up";
 
   useEffect(() => {
     if (menuOpen) {
@@ -40,6 +29,9 @@ export default function Header() {
     } else {
       document.body.classList.remove('noScroll');
     }
+    return () => {
+      document.body.classList.remove('noScroll');
+    };
   }, [menuOpen]);
 
   return (
