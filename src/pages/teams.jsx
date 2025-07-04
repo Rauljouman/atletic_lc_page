@@ -1,6 +1,6 @@
 "use client";
 import Head from "next/head";
-import styles from "@/styles/Teams.module.css";
+import styles from "@/styles/teams.module.css";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase/firebaseConfig"; 
