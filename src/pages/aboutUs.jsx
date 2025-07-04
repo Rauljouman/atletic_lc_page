@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <>
       <Head>
-        <title>Sobre Nosotros – Atletic Les Corts Futsal</title>
+        <title>Sobre Nosotros – Atlétic Les Corts Futsal</title>
         <meta name="description" content="Conoce la historia, valores y misión del Atletic Les Corts Futsal. Más que un club, una comunidad." />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +39,7 @@ export default function AboutUs() {
           <div className={styles.block}>
             <h3 className={styles.subtitle}>Nuestra historia</h3>
             <p>
-              Atlètic Les Corts nace en 2017 fruto de la unión de dos clubs independientes del barrio de Les Corts: <strong>Sang Culer Cor Català</strong> y <strong>Corsica Futsal</strong>.
+              Atlétic Les Corts nace en 2017 fruto de la unión de dos clubs independientes del barrio de Les Corts: <strong>Sang Culer Cor Català</strong> y <strong>Corsica Futsal</strong>.
             </p>
             <p>
               Para la temporada 2025-2026 el club contará con <strong>8 equipos de base</strong> (Alevín, Infantil A, B y C Escolar, Cadete A, B y C y Juvenil A), <strong>3 equipos sénior</strong> (Sénior A, B y C) y <strong>1 equipo veterano</strong>. ¡En total, 155 deportistas federados en la Federació Catalana de Futbol!
@@ -68,7 +68,7 @@ export default function AboutUs() {
                 <li>Hacer que los jugadores se diviertan practicando fútbol sala.</li>
                 <li>Implementar un plan formativo de calidad.</li>
                 <li>Posicionar a los equipos en los primeros puestos.</li>
-                <li>Consolidar Atlètic Les Corts como una institución de excelencia.</li>
+                <li>Consolidar Atlétic Les Corts como una institución de excelencia.</li>
               </ul>
             </div>
 

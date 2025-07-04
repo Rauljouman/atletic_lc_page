@@ -6,7 +6,7 @@ export default function Contact() {
   return (
   <>
     <Head>
-      <title>Contacto – Atletic Les Corts Futsal</title>
+      <title>Contacto – Atlétic Les Corts Futsal</title>
       <meta name="description" content="Escríbenos para unirte al club, resolver dudas sobre los equipos o colaborar con nosotros." />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />

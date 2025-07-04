@@ -29,17 +29,17 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
         >
           <div className={styles.inputGroup}>
-            <input type="text" name="Nombre" placeholder=" " required />
-            <label>Nombre</label>
+            <input type="text" id="nombre" name="Nombre" placeholder=" " required />
+            <label for="nombre">Nombre</label>
           </div>
 
           <div className={styles.inputGroup}>
-            <input type="email" name="Email usado" placeholder=" " required />
-            <label>Email</label>
+            <input type="email" id="email" name="Email usado" placeholder=" " required />
+            <label for="email">Email</label>
           </div>
           <div className={styles.inputGroup}>
-            <textarea name="Mensaje" placeholder=" " required></textarea>
-            <label>Mensaje</label>
+            <textarea name="Mensaje" id="mensaje" placeholder=" " required></textarea>
+            <label  for="mensaje">Mensaje</label>
           </div>
           <div className={styles.buttonWrapper}>
             <button type="submit" className={styles.button}>Enviar</button>
@@ -53,6 +53,7 @@ export default function ContactForm() {
         <div className={styles.mapBox}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.665751111211!2d2.117118174796338!3d41.38134619637175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f61c685557%3A0x1b76e51044aa9154!2sCamp%20de%20futbol%20sala%20CEM%20Ar%C3%ADstides%20Maillol!5e0!3m2!1sca!2ses!4v1750974221303!5m2!1sca!2ses"
+            title="Ubicación del campo Atlétic Les Corts Futsal"
             width="100%"
             height="300"
             style={{

@@ -4,20 +4,24 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.left}>
-        © 2025 Atletic Les Corts.         
-        <br></br>
+        © 2025 Atletic Les Corts.
+        <br />
         Todos los derechos reservados.
       </div>
       <div className={styles.right}>
-        <a
-          href="https://www.google.com/maps/place/Poliesportiu+Ar%C3%ADstides+Maillol"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Carrer de Martí i Franquès, 17‑21
-        </a>
-        <br></br>
-        <a href="tel:+34678677719" title="Teléfono">678 67 77 19</a>
+        <div className={styles.addressBlock}>
+          <a
+            href="https://www.google.com/maps/place/Poliesportiu+Ar%C3%ADstides+Maillol"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ver ubicación en el mapa"
+          >
+            Carrer de Martí i Franquès, 17‑21
+          </a>
+          <a href="tel:+34678677719" title="Teléfono">
+            678 67 77 19
+          </a>
+        </div>
       </div>
     </footer>
   );

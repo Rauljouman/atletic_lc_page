@@ -87,7 +87,7 @@
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: #333333;
   transition: background 0.3s ease;
   font-family: 'Rajdhani', sans-serif;  
 }
