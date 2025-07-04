@@ -30,16 +30,16 @@ export default function ContactForm() {
         >
           <div className={styles.inputGroup}>
             <input type="text" id="nombre" name="Nombre" placeholder=" " required />
-            <label for="nombre">Nombre</label>
+            <label htmlFor="nombre">Nombre</label>
           </div>
 
           <div className={styles.inputGroup}>
             <input type="email" id="email" name="Email usado" placeholder=" " required />
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
           </div>
           <div className={styles.inputGroup}>
             <textarea name="Mensaje" id="mensaje" placeholder=" " required></textarea>
-            <label  for="mensaje">Mensaje</label>
+            <label  htmlFor="mensaje">Mensaje</label>
           </div>
           <div className={styles.buttonWrapper}>
             <button type="submit" className={styles.button}>Enviar</button>

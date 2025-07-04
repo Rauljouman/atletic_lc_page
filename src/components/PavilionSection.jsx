@@ -11,7 +11,8 @@ export default function PavilionSection() {
           <Image
             src="/assets/campo.jpg"
             alt="Campo de fútbol"
-            fill
+            width={600}
+            height={400}
             style={{ objectFit: "cover", borderRadius: 8 }}
           />
         </div>
