@@ -29,6 +29,7 @@ export default function GroupSection() {
           className={styles.photo}
           width={600}
           height={400}
+          priority={true}
         />
       </div>
       <p className={styles.slogan}>
