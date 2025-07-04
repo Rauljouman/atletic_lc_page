@@ -1,17 +1,24 @@
+import { useEffect, useRef, useState } from "react";
+import Cookies from "js-cookie";
 import styles from "./ContactForm.module.css";
-import { useRef } from "react";
-
 
 export default function ContactForm() {
-
   const formRef = useRef(null);
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    const consent = Cookies.get("mapConsent");
+    if (consent === "true") {
+      setShowMap(true);
+    }
+  }, []);
 
   const handleSubmit = () => {
     setTimeout(() => {
       if (formRef.current) {
         formRef.current.reset();
       }
-    }, 100); 
+    }, 100);
   };
 
   return (
@@ -21,9 +28,10 @@ export default function ContactForm() {
         Si tienes alguna duda, consulta o simplemente quieres saludar, escríbenos por aquí.
       </p>
       <div className={styles.container}>
-        <form className={styles.form} 
+        <form
+          className={styles.form}
           autoComplete="on"
-          action="https://formsubmit.co/rauljouman@gmail.com" 
+          action="https://formsubmit.co/rauljouman@gmail.com"
           method="POST"
           ref={formRef}
           onSubmit={handleSubmit}
@@ -32,39 +40,36 @@ export default function ContactForm() {
             <input type="text" id="nombre" name="Nombre" placeholder=" " required />
             <label htmlFor="nombre">Nombre</label>
           </div>
-
           <div className={styles.inputGroup}>
             <input type="email" id="email" name="Email usado" placeholder=" " required />
             <label htmlFor="email">Email</label>
           </div>
           <div className={styles.inputGroup}>
             <textarea name="Mensaje" id="mensaje" placeholder=" " required></textarea>
-            <label  htmlFor="mensaje">Mensaje</label>
+            <label htmlFor="mensaje">Mensaje</label>
           </div>
           <div className={styles.buttonWrapper}>
             <button type="submit" className={styles.button}>Enviar</button>
           </div>
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="¡Nuevo mensaje desde tu web! 📨"/>
-          <input type="hidden" name="_blacklist" value="email,name"/>
+          <input type="hidden" name="_subject" value="¡Nuevo mensaje desde tu web! 📨" />
+          <input type="hidden" name="_blacklist" value="email,name" />
           <input type="hidden" name="_next" value="https://www.instagram.com/atlescortsfs/?hl=es" />
         </form>
 
-        <div className={styles.mapBox}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.665751111211!2d2.117118174796338!3d41.38134619637175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f61c685557%3A0x1b76e51044aa9154!2sCamp%20de%20futbol%20sala%20CEM%20Ar%C3%ADstides%20Maillol!5e0!3m2!1sca!2ses!4v1750974221303!5m2!1sca!2ses"
-            title="Ubicación del campo Atlétic Les Corts Futsal"
-            width="100%"
-            height="300"
-            style={{
-              border: 0,
-              borderRadius: '8px',
-            }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        {showMap && (
+          <div className={styles.mapBox}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=..."
+              title="Ubicación del campo Atletic Les Corts"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: "8px" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        )}
       </div>
     </section>
   );
