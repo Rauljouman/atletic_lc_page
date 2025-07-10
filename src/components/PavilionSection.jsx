@@ -13,9 +13,10 @@ export default function PavilionSection() {
             alt="Campo de fútbol"
             width={600}
             height={400}
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+            className={styles.miClaseSiTienes}
             priority
-            style={{ objectFit: "cover", borderRadius: 8 }}
+            fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
           />
         </div>
 
