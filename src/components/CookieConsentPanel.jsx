@@ -1,19 +1,21 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import styles from "./CookieConsentPanel.module.css";
+import { useCookieConsent } from "@/context/CookieConsentContext";
 
 export default function CookieConsentPanel() {
   const [visible, setVisible] = useState(false);
-  const consent = Cookies.get("siteConsent");
+  const { hasConsent, setHasConsent } = useCookieConsent();
 
   useEffect(() => {
-    if (!consent) {
+    if (!hasConsent && !Cookies.get("siteConsent")) {
       setVisible(true);
     }
-  }, [consent]);
+  }, [hasConsent]);
 
   const acceptCookies = () => {
     Cookies.set("siteConsent", "accepted", { expires: 365 });
+    setHasConsent(true);
     setVisible(false);
   };
 

@@ -29,6 +29,7 @@ export default function GroupSection() {
           className={styles.photo}
           fill
           priority={true}
+          fetchPriority="high"
         />
       </div>
       <p className={styles.slogan}>

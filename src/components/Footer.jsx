@@ -15,10 +15,15 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             title="Ver ubicación en el mapa"
+            className={styles.touchTarget}
           >
             Carrer de Martí i Franquès, 17‑21
           </a>
-          <a href="tel:+34678677719" title="Teléfono">
+          <a
+            href="tel:+34678677719"
+            title="Teléfono"
+            className={styles.touchTarget}
+          >
             678 67 77 19
           </a>
         </div>

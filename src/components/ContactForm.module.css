@@ -9,7 +9,7 @@
   font-size: 2.2rem;
   color: #ff6a00;
   margin-bottom: 10px;
-  margin-top: 30px
+  margin-top: 30px;
 }
 
 .subtitle {
@@ -85,118 +85,12 @@
   border: none;
   padding: 12px 30px;
   font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #333333;
-  transition: background 0.3s ease;
-  font-family: 'Rajdhani', sans-serif;  
-}
-
-.button:hover {
-  background-color: #ff6a00;
-}
-
-.mapBox {
-  flex: 1;
-  max-width: 500px;
-  height: 300px;
-  padding-top: 10px;
-  border-radius: 10%;
-  margin-bottom: 60px;
-}
-
-.contactSection {
-  background-color: #333333;
-  color: white;
-  text-align: center;
-  font-family: 'Rajdhani', sans-serif;
-}
-
-.title {
-  font-size: 2.2rem;
-  color: #ff6a00;
-  margin-bottom: 10px;
-  margin-top: 30px
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  color: #ff6a00;
-  margin-bottom: 40px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 80px;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.form {
-  flex: 1;
-  max-width: 500px;
-  min-width: 300px;
-  text-align: left;
-}
-
-.inputGroup {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.inputGroup input,
-.inputGroup textarea {
-  width: 100%;
-  padding: 12px 10px;
-  background: #2a2a2a;
-  border: 2px solid #ff6a00;
-  border-radius: 5px;
-  color: white;
-  outline: none;
-  font-size: 1rem;
-  resize: none;
-}
-
-.inputGroup label {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  padding: 0 5px;
-  color: #aaa;
-  transition: 0.2s ease;
-  pointer-events: none;
-}
-
-.inputGroup input:focus + label,
-.inputGroup input:not(:placeholder-shown) + label,
-.inputGroup textarea:focus + label,
-.inputGroup textarea:not(:placeholder-shown) + label {
-  top: -10px;
-  left: 10px;
-  font-size: 0.85rem;
-  color: #ff6a00;
-}
-
-.buttonWrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
-  background-color: #ff6a00;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
+  font-weight: 850;
   border-radius: 5px;
   cursor: pointer;
   color: #f5f5f5;
   transition: background 0.3s ease;
-  font-family: 'Rajdhani', sans-serif;  
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .button:hover {
@@ -206,19 +100,29 @@
 .mapBox {
   flex: 1;
   max-width: 500px;
+  min-width: 300px;
   height: 300px;
-  padding-top: 10px;
-  border-radius: 10%;
   margin-bottom: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mapBox iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  border-radius: 10px;
 }
 
 @media (max-width: 767px) {
-  .contactSection{
+  .contactSection {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
   }
-  .form{
+
+  .form {
     max-width: 1200px;
     margin-top: -40px;
     margin-right: 22px;
@@ -240,11 +144,11 @@
     margin-bottom: 30px;
   }
 
-  .container{
+  .container {
     gap: 30px;
   }
 
-  .subtitle{
+  .subtitle {
     font-size: 1.2rem;
   }
 }
