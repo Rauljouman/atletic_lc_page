@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import styles from "./GroupSection.module.css";
 import Image from "next/image";
 
-// Definimos ambas versiones por imagen
 const images = [
   {
     desktop: "/assets/SeniorA_photo.jpg",
-    mobile: "/assets/SeniorA_mobile.jpg",
+    mobile: "/assets/SeniorA_mobile.webp",
     alt: "Equipo Sénior A del Atletic Les Corts Futsal",
   },
   {
@@ -20,14 +19,13 @@ export default function GroupSection() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detecta si es móvil
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 767);
     };
 
-    checkMobile(); // Comprobar al cargar
-    window.addEventListener("resize", checkMobile); // Escuchar cambios
+    checkMobile(); 
+    window.addEventListener("resize", checkMobile);
 
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
