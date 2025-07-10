@@ -25,7 +25,7 @@ export default function CookieConsentPanel() {
         <button className={styles.close} onClick={acceptCookies}>✕</button>
         <h2 className={styles.title}>Resumen de privacidad</h2>
         <p className={styles.description}>
-          Usamos cookies esenciales para el correcto funcionamiento del sitio. Además, el mapa de Google puede establecer cookies de terceros. Al continuar navegando, aceptas su uso.
+          Usamos cookies esenciales para el correcto funcionamiento del sitio. Además, el mapa de Google puede establecer cookies de terceros. <br />Al continuar navegando, aceptas su uso.
         </p>
         <div className={styles.buttons}>
           <button onClick={acceptCookies} className={styles.acceptAll}>

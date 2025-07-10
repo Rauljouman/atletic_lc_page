@@ -105,34 +105,111 @@
   margin-bottom: 60px;
 }
 
-@media (max-width: 1024px) {
-  .contactSection {
-    padding: 0 40px;
-  }
+.contactSection {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+}
 
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0;
-    gap: 5px;
-  }
+.title {
+  font-size: 2.2rem;
+  color: #ff6a00;
+  margin-bottom: 10px;
+  margin-top: 30px
+}
 
-  .form {
-    width: 100%;
-    padding: 0 40px;
-  }
+.subtitle {
+  font-size: 1.5rem;
+  color: #ff6a00;
+  margin-bottom: 40px;
+}
 
-  .mapBox {
-    width: 100%;
-    padding: 0 40px;
-  }
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
 
-  .subtitle {
-    text-align: left;
-    padding-left: 0;
-  }
+.form {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
+  text-align: left;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 12px 10px;
+  background: #2a2a2a;
+  border: 2px solid #ff6a00;
+  border-radius: 5px;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+  resize: none;
+}
+
+.inputGroup label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  padding: 0 5px;
+  color: #aaa;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.inputGroup input:focus + label,
+.inputGroup input:not(:placeholder-shown) + label,
+.inputGroup textarea:focus + label,
+.inputGroup textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.85rem;
+  color: #ff6a00;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: #ff6a00;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333333;
+  transition: background 0.3s ease;
+  font-family: 'Rajdhani', sans-serif;  
+}
+
+.button:hover {
+  background-color: #ff6a00;
+}
+
+.mapBox {
+  flex: 1;
+  max-width: 500px;
+  height: 300px;
+  padding-top: 10px;
+  border-radius: 10%;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 767px) {
@@ -153,5 +230,21 @@
     margin: 0 auto;
     padding: 40px 20px;
     margin-bottom: -90px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form,
+  .mapBox {
+    padding: 0 40px;
+    margin-bottom: 30px;
+  }
+
+  .container{
+    gap: 30px;
+  }
+
+  .subtitle{
+    font-size: 1.2rem;
   }
 }
