@@ -105,6 +105,36 @@
   margin-bottom: 60px;
 }
 
+@media (max-width: 1024px) {
+  .contactSection {
+    padding: 0 40px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .mapBox {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .subtitle {
+    text-align: left;
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 767px) {
   .contactSection{
     max-width: 1200px;
