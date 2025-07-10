@@ -27,8 +27,7 @@ export default function GroupSection() {
           alt={images[currentImage].alt}
           style={{ objectFit: "cover" }}
           className={styles.photo}
-          width={600}
-          height={400}
+          fill
           priority={true}
         />
       </div>
