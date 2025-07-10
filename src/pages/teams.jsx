@@ -2,9 +2,11 @@
 import Head from "next/head";
 import styles from "@/styles/Teams.module.css";
 import { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/firebase/firebaseConfig"; 
-import TeamCard from "@/components/TeamCard";
+import dynamic from "next/dynamic";
+
+const TeamCard = dynamic(() => import("@/components/TeamCard"), {
+  loading: () => <p>Cargando equipo...</p>,
+});
 
 export default function Teams() {
   const [teams, setTeams] = useState([]);
@@ -13,15 +15,19 @@ export default function Teams() {
 
   useEffect(() => {
     const fetchTeams = async () => {
+      const { collection, getDocs } = await import("firebase/firestore");
+      const { db } = await import("@/firebase/firebaseConfig");
+
       const querySnapshot = await getDocs(collection(db, "equipos"));
       const data = querySnapshot.docs.map(doc => ({
         id: doc.id,
-        ...doc.data() 
+        ...doc.data()
       }));
       setTeams(data);
     };
+
     fetchTeams();
-  }, []); 
+  }, []);
 
   const equiposFiltrados = teams.filter(team =>
     (!filtroCategoria || team.categoria === filtroCategoria) &&
@@ -43,26 +49,31 @@ export default function Teams() {
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <link rel="canonical" href="https://atletic-les-corts.com/equipos" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "SportsClub",
-          "name": "Atletic Les Corts Futsal",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Les Corts",
-            "addressRegion": "Barcelona",
-            "addressCountry": "ES"
-          },
-          "url": "https://atletic-les-corts.com/equipos",
-          "logo": "https://atletic-les-corts.com/assets/logo.png",
-          "hasPOS": "Barcelona"
-        })}} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SportsClub",
+              "name": "Atletic Les Corts Futsal",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Les Corts",
+                "addressRegion": "Barcelona",
+                "addressCountry": "ES"
+              },
+              "url": "https://atletic-les-corts.com/equipos",
+              "logo": "https://atletic-les-corts.com/assets/logo.png",
+              "hasPOS": "Barcelona"
+            })
+          }}
+        />
       </Head>
 
       <div className={styles.teamsSection}>
         <div className={styles.filtros}>
           <h1 className={styles.title}>Nuestros equipos</h1>
-          <div className={styles.searchAndFilter}> 
+          <div className={styles.searchAndFilter}>
             <input
               type="text"
               placeholder="Buscar por nombre..."
