@@ -12,7 +12,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://atletic-lc-page.vercel.app/" />
-        <link rel="preload" as="image" href="/assets/JuvenilA_photo.jpg" />
         <link rel="preload" as="image" href="/assets/campo.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

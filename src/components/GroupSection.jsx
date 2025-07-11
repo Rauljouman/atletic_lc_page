@@ -7,7 +7,7 @@ export default function GroupSection() {
       <h1 className={styles.title}>Atletic Les Corts</h1>
       <div className={styles.photoBox}>
         <Image
-          src="/assets/SeniorA_photo.jpg"
+          src="/assets/SeniorA_photo.jpeg"
           alt="Equipo Sénior A del Atletic Les Corts Futsal"
           fill
           className={styles.photo}
