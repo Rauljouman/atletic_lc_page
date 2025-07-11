@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://www.atletic-les-corts.com
+
+# Sitemaps
 Sitemap: https://www.atletic-les-corts.com/sitemap.xml
