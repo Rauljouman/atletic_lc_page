@@ -4,9 +4,8 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.left}>
-        © 2025 Atletic Les Corts.
-        <br />
-        Todos los derechos reservados.
+        <p>© 2025 Atletic Les Corts.</p>
+        <p>Todos los derechos reservados.</p>
       </div>
       <div className={styles.right}>
         <div className={styles.addressBlock}>

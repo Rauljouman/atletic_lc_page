@@ -22,7 +22,7 @@ export default function ContactForm() {
         <form
           className={styles.form}
           autoComplete="on"
-          action="https://formsubmit.co/rauljouman@gmail.com"
+          action="https://formsubmit.co/Atlescortsfs@gmail.com"
           method="POST"
           ref={formRef}
           onSubmit={handleSubmit}
