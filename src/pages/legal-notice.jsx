@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "@/styles/Legal.module.css";
+import styles from "@/styles/legal.module.css";
 
 export default function LegalNotice() {
   return (
