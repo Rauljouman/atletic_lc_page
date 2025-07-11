@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function GroupSection() {
   return (
     <section className={styles.groupSection}>
-      <h1 className={styles.title}>Atletic Les Corts</h1>
+      <h1 className={styles.title}>Atlètic Les Corts</h1>
       <div className={styles.photoBox}>
         <Image
           src="/assets/SeniorA_photo.jpeg"
