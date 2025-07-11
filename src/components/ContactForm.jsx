@@ -7,12 +7,10 @@ export default function ContactForm() {
   const { hasConsent } = useCookieConsent();
 
   const handleSubmit = () => {
-    setTimeout(() => {
-      if (formRef.current) {
-        formRef.current.reset();
-      }
-    }, 100);
-  };
+  requestAnimationFrame(() => {
+    formRef.current?.reset();
+  });
+};
 
   return (
     <section className={styles.contactSection} id="contacto">

@@ -24,7 +24,19 @@ export default function Header() {
     setIsMobile(window.innerWidth <= 767);
   };
 
-  const timeout = setTimeout(onResize, 0);
+useEffect(() => {
+  const onResize = () => {
+    setIsMobile(window.innerWidth <= 767);
+  };
+
+  const raf = requestAnimationFrame(onResize);
+
+  window.addEventListener("resize", onResize);
+  return () => {
+    cancelAnimationFrame(raf);
+    window.removeEventListener("resize", onResize);
+  };
+}, []);
 
   window.addEventListener("resize", onResize);
   return () => {
