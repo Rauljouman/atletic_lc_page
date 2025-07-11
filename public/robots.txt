@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://atletic-les-corts.com/sitemap.xml
+Sitemap: https://www.atletic-les-corts.com/sitemap.xml
