@@ -20,31 +20,17 @@ export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-  const onResize = () => {
-    setIsMobile(window.innerWidth <= 767);
-  };
+    const onResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
 
-useEffect(() => {
-  const onResize = () => {
-    setIsMobile(window.innerWidth <= 767);
-  };
+    onResize();
+    window.addEventListener("resize", onResize);
 
-  const raf = requestAnimationFrame(onResize);
-
-  window.addEventListener("resize", onResize);
-  return () => {
-    cancelAnimationFrame(raf);
-    window.removeEventListener("resize", onResize);
-  };
-}, []);
-
-  window.addEventListener("resize", onResize);
-  return () => {
-    clearTimeout(timeout);
-    window.removeEventListener("resize", onResize);
-  };
-}, []);
-
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
 
   useEffect(() => {
     document.body.classList.toggle("noScroll", menuOpen);
