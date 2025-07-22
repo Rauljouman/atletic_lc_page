@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <meta property="og:title" content="Atletic Les Corts Futsal" />
-        <meta property="og:description" content="Formando personas y valores a través del fútbol sala desde 2017." />
+        <meta property="og:description" content="Formando valores y persons a través del fútbol sala desde 2017." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://atletic-lc-page.vercel.app/" />
         <meta property="og:image" content="/assets/logo.png" />
