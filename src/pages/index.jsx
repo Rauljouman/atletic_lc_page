@@ -1,7 +1,8 @@
 import Head from "next/head";
-import GroupSection from "@/components/GroupSection";
 import PavilionSection from "@/components/PavilionSection";
 import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
+import styles from "../styles/index.module.css";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <meta property="og:title" content="Atletic Les Corts Futsal" />
-        <meta property="og:description" content="Un club de fútbol sala en Les Corts, Barcelona. Formación, valores y compromiso social." />
+        <meta property="og:description" content="Formando personas y valores a través del fútbol sala desde 2017." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://atletic-lc-page.vercel.app/" />
         <meta property="og:image" content="/assets/logo.png" />
@@ -44,7 +45,24 @@ export default function Home() {
       </Head>
 
       <main>
-        <GroupSection />
+        <section className={styles.groupSection}>
+          <h1 className={styles.title}>Atlètic Les Corts</h1>
+          <div className={styles.photoBox}>
+            <Image
+              src="/assets/SeniorA_photo.jpeg"
+              alt="Equipo Sénior A del Atletic Les Corts Futsal"
+              fill
+              className={styles.photo}
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              priority
+              fetchPriority="high"
+            />
+          </div>
+          <p className={styles.slogan}>
+            Formando personas y valores a través del fútbol sala desde 2017.
+          </p>
+        </section>
         <PavilionSection />
         <div className="space">
           <ContactForm />
