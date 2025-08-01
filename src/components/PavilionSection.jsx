@@ -22,13 +22,13 @@ export default function PavilionSection() {
 
         <div className={styles.textBox}>
           <p>
-            Jugamos en el <strong>Poliesportiu Arístides Maillol</strong>, un pabellón cubierto que está genial para fútbol sala. La pista está en muy buen estado, tiene buen suelo y el ambiente es perfecto para entrenar y competir.
+            Nuestro campo es el <strong>Poliesportiu Arístides Maillol</strong>, un pabellón cubierto que está genial para jugar a fútbol sala. La pista está en muy buenas condiciones, con un suelo que se nota cuidado, y el ambiente es perfecto tanto para entrenar como para competir.
           </p>
           <p>
-            📍 Está en <strong>Carrer de Martí i Franquès, 17‑21</strong>, en el barrio de Les Corts (Barcelona).
+            📍 Nos encontrarás en <strong>Carrer de Martí i Franquès, 17‑21</strong>, en pleno barrio de Les Corts, Barcelona.
           </p>
           <p>
-            🚇 Puedes venir en metro sin problema: tienes la parada de <strong>Palau Reial (L3)</strong> a unos 6 minutos andando, o <strong>Collblanc (L5)</strong> si te va mejor. También paran un montón de buses por la zona, así que llegar es muy fácil.
+            🚇 Llegar es muy fácil: puedes bajarte en <strong>Palau Reial (L3)</strong> o en <strong>Collblanc (L5)</strong>, lo que te venga mejor. También pasan bastantes buses por la zona, así que no hay pérdida.
           </p>
         </div>
       </div>
