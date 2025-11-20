@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram as faInstagramBrand } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import styles from "./Header.module.css";
 
 const NAV_LINKS = [
@@ -68,6 +68,12 @@ export default function Header() {
 
       <header className={styles.header}>
         <div className={styles.left}>
+          <a href="mailto:coordinacion.atlcfs@gmail.com" title="Correo electrónico">
+            <FontAwesomeIcon icon={faEnvelope} />
+          </a>
+          <a href="tel:+34678677719" title="Teléfono">
+            <FontAwesomeIcon icon={faPhone} />
+          </a>
           <Link href="/" aria-label="Ir a la página de inicio">
             <Image
               src="/assets/logo.png"
@@ -77,18 +83,28 @@ export default function Header() {
             />
           </Link>
           <a
+            href="https://www.tiktok.com/@atletic.les.corts"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
+            <FontAwesomeIcon icon={faTiktok} />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UC35CNKhnzuezjFxM4MPn0ZQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
+          <a
             href="https://www.instagram.com/atlescortsfs/"
             target="_blank"
             rel="noopener noreferrer"
             title="Instagram"
           >
-            <FontAwesomeIcon icon={faInstagramBrand} />
-          </a>
-          <a href="mailto:coordinacion.atlcfs@gmail.com" title="Correo electrónico">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
-          <a href="tel:+34678677719" title="Teléfono">
-            <FontAwesomeIcon icon={faPhone} />
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
         <nav className={styles.right} aria-label="Navegación principal">

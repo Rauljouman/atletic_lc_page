@@ -16,7 +16,7 @@ export default function ContactForm() {
     <section className={styles.contactSection} id="contacto">
       <h2 className={styles.title}>Contacta con nosotros</h2>
       <p className={styles.subtitle}>
-        Si tienes alguna duda, consulta o simplemente quieres saludar, escríbenos por aquí.
+        Si tienes alguna duda O consulta, no dudes en escribirnos!
       </p>
       <div className={styles.container}>
         <form
