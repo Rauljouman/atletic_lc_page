@@ -13,10 +13,10 @@ export default function ContactForm() {
 };
 
   return (
-    <section className={styles.contactSection} id="contacto">
+    <div className={styles.contactSection}>
       <h2 className={styles.title}>Contacta con nosotros</h2>
       <p className={styles.subtitle}>
-        Si tienes alguna duda O consulta, no dudes en escribirnos!
+        Si tienes alguna duda o consulta, no dudes en escribirnos!
       </p>
       <div className={styles.container}>
         <form
@@ -68,6 +68,6 @@ export default function ContactForm() {
           </p>
         )}
       </div>
-    </section>
+    </div>
   );
 }

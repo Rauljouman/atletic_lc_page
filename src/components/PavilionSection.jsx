@@ -3,7 +3,7 @@ import styles from "./PavilionSection.module.css";
 
 export default function PavilionSection() {
   return (
-    <section className={styles.pavilionSection}>
+    <div className={styles.pavilionSection}>
       <h2 className={styles.title}>Nuestro templo</h2>
 
       <div className={styles.content}>
@@ -32,6 +32,6 @@ export default function PavilionSection() {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

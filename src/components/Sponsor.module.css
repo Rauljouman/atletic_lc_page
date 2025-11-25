@@ -1,0 +1,103 @@
+.sponsorsSection {
+  background-color: #26262b;
+  padding: 40px 20px;
+  font-family: 'Rajdhani', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  box-sizing: border-box;
+}
+
+.title {
+  color: #ff6a00;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  margin: 0 0 6px 0;
+}
+
+.textBox {
+  font-size: 1.5rem;
+  color: #ff6a00;
+  line-height: 1.4;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 24px;
+}
+
+.sponsors a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 120px;
+  background: transparent;
+  border: none;
+  transition: transform 200ms ease;
+}
+
+.sponsors a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 220ms ease;
+}
+
+.sponsors a:hover img {
+  transform: scale(1.08);
+}
+
+@media (min-width: 1024px) {
+  .sponsors a {
+    flex: 0 0 calc((100% - 60px) / 4);
+    max-width: calc((100% - 60px) / 4);
+    height: 140px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .sponsors a {
+    flex: 0 0 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
+    height: 120px;
+  }
+
+  .textBox {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 599px) {
+  .sponsors {
+    padding: 0 12px;
+    gap: 12px;
+  }
+
+  .sponsors a {
+    flex: 0 0 calc((100% - 12px) / 2);
+    max-width: calc((100% - 12px) / 2);
+    height: 100px;
+  }
+
+  .sponsors a img {
+    max-height: 70px;
+  }
+
+  .textBox {
+    white-space: normal;
+  }
+}

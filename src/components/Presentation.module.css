@@ -1,0 +1,53 @@
+.groupSection {
+  background-color: #333333;
+  padding: 20px 20px;
+  text-align: center;
+  
+}
+
+.photoBox {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 330px; 
+  margin: 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.photo{
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+.title {
+  color: #ff6a00;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-top: 54px;
+  margin-bottom: -15px;
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #ff6a00;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    margin-top: 67px;
+  }
+
+  .photo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .photoBox {
+    max-width: 500px;
+    height: 220px; 
+  }
+}
