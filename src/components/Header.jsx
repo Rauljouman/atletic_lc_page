@@ -9,10 +9,10 @@ import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-i
 import styles from "./Header.module.css";
 
 const NAV_LINKS = [
-  { href: "/", label: "Inicio" },
-  { href: "/teams", label: "Equipos" },
-  { href: "/aboutUs", label: "Sobre nosotros" },
-  { href: "/contact", label: "Contacto" },
+  { href: "/", label: "Inici" },
+  { href: "/teams", label: "Equips" },
+  { href: "/aboutUs", label: "Sobre nosaltres" },
+  { href: "/contact", label: "Contacte" },
 ];
 
 export default function Header() {
@@ -39,28 +39,35 @@ export default function Header() {
   return (
     <>
       {isMobile && (
-        <div
+        <button
+          type="button"
           className={styles.mobileMenuToggle}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Abrir menú"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Obrir menú"
         >
           <div className={styles.hamburger}></div>
-        </div>
+        </button>
       )}
 
       <nav
         className={`${styles.mobileMenu} ${menuOpen ? styles.active : ""}`}
-        aria-label="Menú móvil"
+        aria-label="Menú mòbil"
       >
         <button
           className={styles.closeButton}
           onClick={() => setMenuOpen(false)}
-          aria-label="Cerrar menú"
+          aria-label="Tancar menú"
         >
           ✕
         </button>
+
         {NAV_LINKS.map(({ href, label }) => (
-          <Link key={href} href={href} className={styles.navLink} onClick={() => setMenuOpen(false)}>
+          <Link
+            key={href}
+            href={href}
+            className={styles.mobileNavLink}
+            onClick={() => setMenuOpen(false)}
+          >
             {label}
           </Link>
         ))}
@@ -68,25 +75,27 @@ export default function Header() {
 
       <header className={styles.header}>
         <div className={styles.left}>
-          <a href="mailto:coordinacion.atlcfs@gmail.com" title="Correo electrónico">
+          <a href="mailto:coordinacion.atlcfs@gmail.com" title="Correu electrònic">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
-          <a href="tel:+34678677719" title="Teléfono">
+          <a href="tel:+34678677719" title="Telèfon">
             <FontAwesomeIcon icon={faPhone} />
           </a>
-          <Link href="/" aria-label="Ir a la página de inicio">
+
+          <Link href="/" aria-label="Anar a l'inici" className={styles.logo}>
             <Image
               src="/assets/logo.png"
-              alt="Escudo Atletic Les Corts"
-              width={isMobile ? 40 : 60}
-              height={isMobile ? 40 : 60}
+              alt="Escut Atlètic Les Corts"
+              width={60}
+              height={60}
             />
           </Link>
+
           <a
             href="https://www.tiktok.com/@atletic.les.corts"
             target="_blank"
             rel="noopener noreferrer"
-            title="Instagram"
+            title="TikTok"
           >
             <FontAwesomeIcon icon={faTiktok} />
           </a>
@@ -94,7 +103,7 @@ export default function Header() {
             href="https://www.youtube.com/channel/UC35CNKhnzuezjFxM4MPn0ZQ"
             target="_blank"
             rel="noopener noreferrer"
-            title="Instagram"
+            title="YouTube"
           >
             <FontAwesomeIcon icon={faYoutube} />
           </a>
@@ -107,7 +116,8 @@ export default function Header() {
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
-        <nav className={styles.right} aria-label="Navegación principal">
+
+        <nav className={styles.right} aria-label="Navegació principal">
           {NAV_LINKS.map(({ href, label }) => (
             <Link key={href} href={href} className={styles.navLink}>
               {label}
