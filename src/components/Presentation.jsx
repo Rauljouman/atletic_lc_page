@@ -3,23 +3,46 @@ import styles from "./Presentation.module.css";
 
 export default function Presentation() {
   return (
-    <div className={styles.groupSection}>
-          <h1 className={styles.title}>Atlètic Les Corts</h1>
-          <div className={styles.photoBox}>
+    <section className={styles.hero}>
+      <div className={styles.container}>
+        {/* Bloque de texto izquierda */}
+        <div className={styles.textBlock}>
+          <span className={styles.pill}>Atlètic Les Corts Futsal</span>
+          <h1 className={styles.title}>
+            Futbol sala, <br /> passió i família <br />al barri de Les Corts.
+          </h1>
+          <p className={styles.subtitle}>
+            Som un club formatiu on jugadors, famílies i staff comparteixen uns
+            mateixos valors dins i fora de la pista. Des de l&apos;escola fins als
+            sèniors, l&apos;objectiu és fer créixer persones abans que esportistes.
+          </p>
+
+          <div className={styles.ctas}>
+            <a href="/teams" className={styles.primaryBtn}>
+              Veure equips
+            </a>
+
+            <a href="/contact" className={styles.secondaryBtn}>
+              Contacta'ns
+            </a>
+          </div>
+        </div>
+
+        {/* Bloque imagen derecha */}
+        <div className={styles.imageSide}>
+          <div className={styles.halo} />
+          <div className={styles.imageFrame}>
             <Image
-              src="/assets/SeniorA_photo.jpeg"
-              alt="Equipo Sénior A del Atletic Les Corts Futsal"
+              src="/assets/SeniorA.jpeg"
+              alt="Jugadores del Atlètic Les Corts Futsal"
               fill
               className={styles.photo}
-              style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 520px"
               priority
-              fetchPriority="high"
             />
           </div>
-          <p className={styles.slogan}>
-            Formando personas y valores a través del fútbol sala desde 2017.
-          </p>
         </div>
+      </div>
+    </section>
   );
 }

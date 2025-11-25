@@ -1,53 +1,248 @@
-.groupSection {
-  background-color: #333333;
-  padding: 20px 20px;
-  text-align: center;
-  
+/* HERO – Ocupa toda la pantalla teniendo en cuenta el header fijo */
+
+.hero {
+  min-height: calc(100vh - 72px); /* pantalla - header desktop */
+  padding: 96px 56px 72px;
+  box-sizing: border-box;
+  background: #050505;
+  background-image: radial-gradient(
+    circle at 75% 15%,
+    rgba(255, 106, 0, 0.45),
+    transparent 60%
+  );
+  background-repeat: no-repeat;
+  color: #f5f5f5;
 }
 
-.photoBox {
+/* Contenedor principal */
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  margin-left: 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+/* Bloque de texto izquierda */
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pill {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 6px 24px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 106, 0, 0.1);
+  color: #ff9b3a;
+  border: 1px solid rgba(255, 155, 58, 0.5);
+}
+
+.title {
+  font-size: clamp(2.4rem, 3vw + 1.2rem, 3.2rem);
+  line-height: 1.08;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d3d3d3;
+  margin: 0;
+  max-width: 520px;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Botones CTA */
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #ff7a1a, #ff6a00);
+  color: #151515;
+  box-shadow: 0 6px 18px rgba(255, 106, 0, 0.35);
+}
+
+.primaryBtn:hover {
+  box-shadow: 0 10px 26px rgba(255, 106, 0, 0.55);
+  transform: translateY(-1px);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #f5f5f5;
+  border: 1px solid rgba(245, 245, 245, 0.35);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: translateY(-1px);
+}
+
+/* Imagen derecha */
+
+.imageSide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Halo naranja detrás */
+
+.halo {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 106, 0, 0.28) 0%,
+    rgba(255, 106, 0, 0.18) 25%,
+    rgba(255, 106, 0, 0.08) 50%,
+    transparent 75%
+  );
+  filter: blur(70px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Marco de la foto */
+
+.imageFrame {
   position: relative;
   width: 100%;
-  max-width: 700px;
-  height: 330px; 
-  margin: 30px auto;
-  border-radius: 20px;
+  max-width: 420px;
+  aspect-ratio: 4 / 3;
+
+  border-radius: 26px;
   overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #111;
+
+  z-index: 1;
 }
 
-.photo{
-  border-radius: 20px;
+.photo {
   object-fit: cover;
 }
 
+/* Tablet (≤ 1024px) */
 
-.title {
-  color: #ff6a00;
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-top: 54px;
-  margin-bottom: -15px;
-}
+@media (max-width: 1024px) {
+  .hero {
+    min-height: calc(100vh - 72px);
+    padding: 72px 16px 60px;
+  }
 
-.slogan {
-  font-style: italic;
-  font-size: 1.4rem;
-  color: #ff6a00;
-  margin-top: 10px;
-}
+  .container {
+    max-width: 960px;
+    gap: 32px;
+  }
 
-@media (max-width: 767px) {
   .title {
-    margin-top: 67px;
+    font-size: clamp(2.1rem, 2.5vw + 1rem, 2.6rem);
   }
 
-  .photo {
+  .imageFrame {
+    max-width: 380px;
+  }
+}
+
+/* Tablet vertical / móvil grande (≤ 768px) */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 64px); /* header móvil = 64px */
+    padding: 80px 16px 56px;
+  }
+
+  .container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .imageSide {
+    order: -1;
+  }
+
+  .textBlock {
+    text-align: center;
+    align-items: center;
+  }
+
+  .pill {
+    align-self: center;
+  }
+
+  .subtitle {
     max-width: 100%;
-    height: auto;
   }
 
-  .photoBox {
-    max-width: 500px;
-    height: 220px; 
+  .imageFrame {
+    max-width: 360px;
+  }
+}
+
+/* Móvil pequeño (≤ 480px) */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 72px 14px 40px;
+  }
+
+  .ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
+
+  .imageFrame {
+    max-width: 320px;
   }
 }

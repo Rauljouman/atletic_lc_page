@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Rajdhani } from "next/font/google";
 import CookieConsentPanel from "@/components/CookieConsentPanel";
-import { CookieConsentProvider } from "@/context/CookieConsentContext"; // 👈 AÑADIDO
+import { CookieConsentProvider } from "@/context/CookieConsentContext";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -13,14 +13,16 @@ const rajdhani = Rajdhani({
 
 export default function App({ Component, pageProps }) {
   return (
-    <CookieConsentProvider> 
+    <CookieConsentProvider>
       <div className={`body-flex ${rajdhani.className}`}>
         <Header />
+
         <div className="content-wrapper">
           <main>
-            <Component {...pageProps} />
+              <Component {...pageProps} />
           </main>
         </div>
+
         <CookieConsentPanel />
         <Footer />
       </div>
