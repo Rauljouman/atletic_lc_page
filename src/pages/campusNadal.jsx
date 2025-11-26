@@ -29,7 +29,7 @@ export default function CampusNadalPage() {
 
               <div className={styles.qrInside}>
                 <Image
-                  src="/assets/campus/qr1pago.jpg"
+                  src="/assets/Campus/qr1pago.jpg"
                   alt="QR Torn 1"
                   width={110}
                   height={110}
@@ -54,7 +54,7 @@ export default function CampusNadalPage() {
 
               <div className={styles.qrInside}>
                 <Image
-                  src="/assets/campus/qr2pago.jpg"
+                  src="/assets/Campus/qr2pago.jpg"
                   alt="QR Torn 2"
                   width={110}
                   height={110}
@@ -78,7 +78,7 @@ export default function CampusNadalPage() {
         <div className={styles.rightBlock}>
           <div className={styles.poster}>
             <Image
-              src="/assets/campus/campus-nadal-promo.jpg"
+              src="/assets/Campus/campus-nadal-promo.jpg"
               alt="Cartell Campus Nadal"
               width={600}
               height={800}

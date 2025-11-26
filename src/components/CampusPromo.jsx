@@ -25,7 +25,7 @@ export default function CampusPromo() {
         <Link href="/campusNadal" className={styles.link}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/assets/campus/campus-nadal-promo.jpg"
+              src="/assets/Campus/campus-nadal-promo.jpg"
               alt="Campus de Nadal"
               fill
               className={styles.image}
