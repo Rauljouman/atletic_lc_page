@@ -1,65 +1,125 @@
 .teamsSection {
-  padding: 50px;
-  background-color: #333333;
+  background: #1a1a1a;
   color: #f5f5f5;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  padding: 80px 60px;
+  margin-top: 20px;
+}
+
+.inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Pill superior */
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 32px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 155, 58, 0.65);
+  background: rgba(255, 106, 0, 0.1);
+  color: #ff9b3a;
+  margin: 0 auto 18px;
+  margin-bottom: -5px;
+  width: fit-content;
+  text-align: center;
 }
 
 .title {
-  font-size: 2.5rem;
-  color: #ff6a00;
+  font-size: 2.4rem;
+  color: #ffffff;
   text-align: center;
-  margin-top: 17px;
-  margin-bottom: -8px;
+  margin: 0 0 26px;
+  font-weight: 700;
+  margin-bottom: -3px;
 }
+
+/* Filtres i buscador */
 
 .filtros {
   display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center; 
-  gap: 15px; 
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
   margin-bottom: 30px;
-  padding: 0 20px;
 }
 
 .searchAndFilter {
   display: flex;
-  flex-direction: row;
-  gap: 15px; 
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  gap: 14px;
   justify-content: center;
 }
 
 .filtros input,
 .filtros select {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   outline: none;
-  font-size: 1rem;
-  width: 250px;
-  background-color: #3d3d3d;
-    color: #757575;
+  font-size: 0.95rem;
+  min-width: 240px;
+  max-width: 280px;
+  background-color: #232323;
+  color: #f5f5f5;
+  transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .filtros select {
   height: 42px;
 }
 
+.filtros input::placeholder {
+  color: #aaaaaa;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+  border-color: #ff6a00;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.4);
+}
+
+/* Grid d’equips */
+
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 24px;
   justify-content: center;
 }
 
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .teamsSection {
+    padding: 60px 40px;
+  }
+}
+
 @media (max-width: 767px) {
+  .teamsSection {
+    padding: 50px 20px;
+  }
 
   .title {
     font-size: 2rem;
-    margin-top: 46px;
+    margin-bottom: 22px;
   }
 
+  .filtros {
+    gap: 16px;
+  }
 
+  .filtros input,
+  .filtros select {
+    min-width: 220px;
+    width: 100%;
+  }
 }

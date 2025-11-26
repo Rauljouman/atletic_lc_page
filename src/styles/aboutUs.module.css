@@ -1,156 +1,218 @@
-.aboutUsSection {
-  background-color: #333333;
+/* ======================================
+   SECCIÓ 1 – QUI SOM
+   ====================================== */
+
+.aboutSection {
+  background: #1a1a1a;
   color: #f5f5f5;
-  padding: 60px 40px;
-  font-family: 'Rajdhani', sans-serif;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  padding: 80px 60px;
+  font-family: "Rajdhani", sans-serif;
 }
 
-.aboutGoalSection {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
-  padding: 60px 40px;
-  font-family: 'Rajdhani', sans-serif;
-  box-sizing: border-box;
-  overflow-x: hidden;
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.goalsGrid {
+/* Pill superior */
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 32px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 155, 58, 0.65);
+  background: rgba(255, 106, 0, 0.10);
+  color: #ff9b3a;
+  margin: 40px auto 20px;
+  width: fit-content;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin: 0 0 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Tarjeta principal */
+
+.card {
+  background: #151515;
+  border-radius: 18px;
+  padding: 28px 30px 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Bloques de texto */
+
+.block + .block {
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  color: #ff6a00;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #e3e3e3;
+  margin: 4px 0 10px;
+}
+
+.card strong {
+  color: #ffdfb0;
+}
+
+
+/* ======================================
+   SECCIÓ 2 – OBJECTIUS (cards per columna)
+   ====================================== */
+
+.goalsSection {
+  background: #18171c;
+  color: #f5f5f5;
+  padding: 70px 60px 80px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.titleSecondary {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin: 0 0 40px;
+  font-weight: 700;
+}
+
+/* Grid de columnes (cada una és una card) */
+
+.cardGrid {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 40px;
   gap: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 900px;
-  box-sizing: border-box;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .column {
   flex: 1;
   min-width: 280px;
-  padding: 0 15px;
-  box-sizing: border-box;
+  max-width: 500px;
+  background: #151515;
+  border-radius: 18px;
+  padding: 26px 28px 30px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.title {
-  font-size: 2.5rem;
-  color: #ff6a00;
+/* Títol de cada card – CENTRAT */
+
+.columnTitle {
+  font-size: 1.4rem;
+  color: #ff9b3a;
+  margin-bottom: 12px;
+  font-weight: 700;
   text-align: center;
-  margin-top: 14px;
-  margin-bottom: 20px;
 }
 
-.title2 {
-  font-size: 2.5rem;
-  color: #ff6a00;
-  text-align: center;
-  margin-top: 13px;
-  margin-bottom: -17px;
-}
-
-.subtitle {
-  font-size: 1.8rem;
-  color: #ff6a00;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-
-.block {
-  max-width: 900px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
+/* Llista: enganxada al punt, alineada a l’esquerra */
 
 .list {
   list-style: none;
-  padding-left: 0;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.list li::before {
-  content: '•';
-  color: #ff6a00;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  padding: 0;
+  margin: 0;
 }
 
 .list li {
-  margin-bottom: 5px;
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 7px;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #dddddd;
+  text-align: left;
 }
 
-.projection {
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
   color: #ff6a00;
+  font-size: 1.2rem;
 }
 
-.listPresent {
-  margin-top: 40px;
-}
+
+/* ======================================
+   RESPONSIVE
+   ====================================== */
 
 @media (max-width: 1024px) {
-  .goalsGrid {
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0;
-    gap: 5px;
+  .aboutSection {
+    padding: 60px 40px;
+  }
+
+  .goalsSection {
+    padding: 60px 40px 70px;
+  }
+
+  .card {
+    padding: 24px 22px 28px;
+  }
+
+  .cardGrid {
+    gap: 28px;
   }
 
   .column {
-    width: 100%;
-    padding: 0 40px;
+    padding: 22px 22px 26px;
   }
 
-  .subtitle {
-    text-align: left;
-    padding-left: 0;
-  }
-
-  .list {
-    padding-left: 0;
+  .list li {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 767px) {
-  .aboutUsSection,
-  .aboutGoalSection {
-    padding: 40px 20px;
+  .aboutSection,
+  .goalsSection {
+    padding: 50px 20px 60px;
   }
 
-  .title {
-    margin-top: 100px;
+  .title,
+  .titleSecondary {
     font-size: 2rem;
-    margin-top: 58px;
-    margin-bottom: 20px;
   }
 
-  .title2 {
-    font-size: 2rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  .card {
+    border-radius: 14px;
+    padding: 22px 18px 26px;
   }
 
-  .subtitle {
-    font-size: 1.4rem;
-    text-align: left;
-    padding-left: 0;
+  .card p,
+  .list li {
+    font-size: 0.94rem;
+  }
+
+  .cardGrid {
+    flex-direction: column;
+    gap: 28px;
   }
 
   .column {
-    padding: 0 15px;
-  }
-
-  .list {
-    padding-left: 10px;
-  }
-
-  .goalsGrid{
-    gap: 5px;
-
+    border-radius: 14px;
+    padding: 20px 18px 24px;
   }
 }

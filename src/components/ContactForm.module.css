@@ -1,57 +1,100 @@
 .contactSection {
-  background-color: #333333;
-  color: white;
+  background: #18171c;
+  color: #f5f5f5;
+  font-family: "Rajdhani", sans-serif;
+  padding: 70px 60px; /* margen lateral 60px */
+}
+
+.inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* CABECERA */
+
+.header {
   text-align: center;
-  font-family: 'Rajdhani', sans-serif;
-}
-
-.title {
-  font-size: 2.2rem;
-  color: #ff6a00;
-  margin-bottom: 10px;
-  margin-top: 30px;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  color: #ff6a00;
   margin-bottom: 40px;
 }
 
-.container {
+/* Pill igual estilo que Partners / Pavelló */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 26px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 155, 58, 0.6);
+  background: rgba(255, 106, 0, 0.08);
+  color: #ff9b3a;
+  margin: 0 auto 12px;
+}
+
+.title {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #dcdcdc;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CONTENIDO */
+
+.content {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  gap: 80px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 48px;
   flex-wrap: wrap;
 }
 
 .form {
   flex: 1;
-  max-width: 500px;
   min-width: 300px;
+  max-width: 520px;
   text-align: left;
 }
 
+/* INPUTS LABEL FLOTANTE */
+
 .inputGroup {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .inputGroup input,
 .inputGroup textarea {
   width: 100%;
   padding: 12px 10px;
-  background: #2a2a2a;
-  border: 2px solid #ff6a00;
-  border-radius: 5px;
-  color: white;
+  background: #232323;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: #f5f5f5;
   outline: none;
   font-size: 1rem;
   resize: none;
+  transition: border 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputGroup textarea {
+  min-height: 120px;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: #ff6a00;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.5);
 }
 
 .inputGroup label {
@@ -60,9 +103,11 @@
   left: 12px;
   transform: translateY(-50%);
   padding: 0 5px;
-  color: #aaa;
-  transition: 0.2s ease;
+  color: #aaaaaa;
+  background: transparent;
+  transition: 0.18s ease;
   pointer-events: none;
+  font-size: 0.96rem;
 }
 
 .inputGroup input:focus + label,
@@ -71,85 +116,91 @@
 .inputGroup textarea:not(:placeholder-shown) + label {
   top: -10px;
   left: 10px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #ff6a00;
+  background-color: #18171c;
 }
+
+/* BOTÓN */
 
 .buttonWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* centrado en el ancho del formulario */
+  margin-top: 8px;
 }
 
 .button {
-  background-color: #ff6a00;
+  background: linear-gradient(135deg, #ff7a1a, #ff6a00);
   border: none;
-  padding: 12px 30px;
+  padding: 11px 30px;
   font-size: 1rem;
-  font-weight: 900;
-  border-radius: 5px;
+  font-weight: 800;
+  border-radius: 999px;
   cursor: pointer;
-  color: #f5f5f5;
-  transition: background 0.3s ease;
-  font-family: 'Rajdhani', sans-serif;
-  margin-bottom: 20px;
+  color: #151515;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .button:hover {
-  background-color: #ff6a00;
+  box-shadow: 0 8px 22px rgba(255, 106, 0, 0.55);
+  transform: translateY(-1px);
 }
 
-.mapBox {
+/* IMAGEN */
+
+.imageBox {
   flex: 1;
-  max-width: 500px;
-  min-width: 300px;
-  height: 300px;
-  margin-bottom: 60px;
-  border-radius: 10px;
+  min-width: 280px;
+  max-width: 480px;
+  border-radius: 18px;
   overflow: hidden;
+  position: relative;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.mapBox iframe {
+.image {
   width: 100%;
   height: 100%;
-  border: none;
+  object-fit: cover;
   display: block;
-  border-radius: 10px;
 }
 
-@media (max-width: 767px) {
+/* TABLET */
+
+@media (max-width: 900px) {
   .contactSection {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 30px;
   }
 
-  .form {
-    max-width: 1200px;
-    margin-top: -40px;
-    margin-right: 22px;
-    margin-bottom: -45px;
+  .content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 32px;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    margin-bottom: -90px;
+  .form,
+  .imageBox {
+    max-width: 100%;
+  }
+
+  .imageBox {
+    width: 100%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .form,
-  .mapBox {
-    padding: 0 40px;
-    margin-bottom: 20px;
+/* MÒBIL */
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 50px 20px;
   }
 
-  .container {
-    gap: 30px;
+  .title {
+    font-size: 2rem;
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 }

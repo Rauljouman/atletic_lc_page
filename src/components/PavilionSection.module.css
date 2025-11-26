@@ -1,61 +1,116 @@
 .pavilionSection {
-  background-color: #1a1a1a;
-  padding: 40px 50px;
-  font-family: 'Rajdhani', sans-serif;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  padding: 70px 60px;         /* 🔸 margen lateral 60px */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.inner {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Pill tipo “PARTNERS DEL CLUB” */
+.kicker {
+  display: inline-flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  padding: 6px 26px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 155, 58, 0.6);
+  background: rgba(255, 106, 0, 0.08);
+  color: #ff9b3a;
+  margin: 0 auto -55px;
 }
 
 .title {
-  color: #ff6a00;
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  width: 100%;
-  margin-bottom: -10px;
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
+/* Contenido en 2 columnas */
 .content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  width: 100%;
+  gap: 50px;
   flex-wrap: wrap;
-  margin-top: -20px;
-  margin-bottom: 30px;
-}
-
-.imageBox {
-  width: 400px;
-  height: 270px;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  flex-shrink: 0;
+  text-align: left; /* el texto del párrafo a la izquierda */
 }
 
 .textBox {
-  max-width: 600px;
-  font-size: 1rem;
-  color: white;
-  line-height: 1.6;
-  text-align: left;
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #dcdcdc;
 }
 
-@media (max-width: 767px) {
-  .imageBox{
-    width: 90%; 
-    margin: 0 auto;
-    display: block;
+.mapBox {
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+  height: 320px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mapBox iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cookieMessage {
+  color: #ff9b3a;
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .pavilionSection {
+    padding: 60px 30px;
   }
-  .pavilionSection{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .textBox {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .mapBox {
+    max-width: 100%;
+    height: 300px;
+  }
+}
+
+/* Mòbil */
+@media (max-width: 480px) {
+  .pavilionSection {
+    padding: 50px 20px;
+  }
+
+  .title {
+    font-size: 1.9rem;
   }
 }

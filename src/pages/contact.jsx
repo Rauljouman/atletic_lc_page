@@ -36,7 +36,6 @@ export default function Contact() {
 
     <div>
       <div className={styles.section}>
-        <h1 className={styles.title}>A qué estás esperando para unirte <br></br>al mejor club de fútbol sala de Les Corts?</h1>
         <ContactForm />
       </div>
     </div>
