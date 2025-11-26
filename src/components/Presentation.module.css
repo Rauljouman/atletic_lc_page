@@ -171,10 +171,12 @@
 
 /* Tablet (≤ 1024px) */
 
+/* Tablet (≤ 1024px) */
 @media (max-width: 1024px) {
   .hero {
-    min-height: calc(100vh - 72px);
-    padding: 72px 16px 60px;
+    /* quitamos altura forzada y ajustamos paddings */
+    min-height: auto;
+    padding: 110px 16px 36px; /* más espacio arriba, menos abajo */
   }
 
   .container {
@@ -187,33 +189,38 @@
     font-size: clamp(2.1rem, 2.5vw + 1rem, 2.6rem);
   }
 
+  .pill {
+    margin-bottom: 16px; /* más separación respecto al título */
+  }
+
   .imageFrame {
     max-width: 380px;
   }
 }
 
 /* Tablet vertical / móvil grande (≤ 768px) */
-
 @media (max-width: 768px) {
   .hero {
-    min-height: calc(100vh - 64px); /* header móvil */
-    padding: 80px 16px 56px;
+    /* también aquí sin 100vh para evitar hueco vacío */
+    min-height: auto;
+    padding: 110px 16px 32px;
   }
 
   .container {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
-    margin: 0 auto;          /* centramos el grid */
+    margin: 0 auto;
   }
 
   .imageSide {
-    order: -1;               /* 🔸 foto pasa arriba */
-    margin: 0;               /* eliminamos margen derecho */
+    order: -1;
+    margin: 0;
+    margin-top: 25px;
   }
 
   .imageFrame {
     max-width: 360px;
-    margin: 0 auto;          /* aseguramos centrado */
+    margin: 0 auto;
   }
 
   .textBlock {
@@ -223,12 +230,27 @@
 
   .pill {
     align-self: center;
+    margin-bottom: 16px; /* misma separación en vertical */
   }
 
   .subtitle {
     max-width: 100%;
   }
+  .ctas {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px; /* separación bonita */
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 260px;      /* 👈 tamaño idéntico para ambos */
+    max-width: 40%;    /* evita que se rompa en móviles muy pequeños */
+  }
+
 }
+
 
 /* Móvil pequeño (≤ 480px) */
 
