@@ -4,7 +4,7 @@ import styles from "./Sponsor.module.css";
 const SPONSORS = [
   {
     name: "BocaArte",
-    logo: "/assets/Sponsors/bocaarte.png",
+    logo: "/assets/Sponsors/Bocaarte.png",
     url: "https://www.instagram.com/bocaarte.gastrotapas/",
   },
   {

@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Atletic Les Corts Futsal</title>
-        <meta name="description" content="Descubre Atletic Les Corts Futsal, un club de fútbol sala en Les Corts, Barcelona. Formación, valores y deporte desde 2024." />
+        <title>Atlètic Les Corts Futsal</title>
+        <meta name="description" content="Descubre Atlètic Les Corts Futsal, un club de fútbol sala en Les Corts, Barcelona. Formación, valores y deporte desde 2024." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://atletic-lc-page.vercel.app/" />
