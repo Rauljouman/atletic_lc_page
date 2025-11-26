@@ -44,3 +44,8 @@ body.noScroll {
 main {
   background-color: #333333;
 }
+.wrapper,
+.content {
+  overflow-x: hidden;
+}
+
