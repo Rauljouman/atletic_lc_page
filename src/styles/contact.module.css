@@ -2,15 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 86.9vh;
-  margin-top: 20px; 
+  margin-top: 35px; 
   background-color: #333333;
   color: #333; 
-}
-
-.title {
-  font-size: 2.5rem;
-  color: #ff6a00;
-  text-align: center;
-  margin-top: 54px;
-  margin-bottom: -10px;
 }

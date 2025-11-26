@@ -179,6 +179,7 @@
   .container {
     max-width: 960px;
     gap: 32px;
+    margin-right: 50px;
   }
 
   .title {

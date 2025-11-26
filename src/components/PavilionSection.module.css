@@ -1,134 +1,116 @@
 .pavilionSection {
-  background: #111015;
-  padding: 72px 16px 80px;
-  font-family: "Rajdhani", sans-serif;
+  background: #1a1a1a;
   color: #f5f5f5;
+  padding: 70px 60px;         /* 🔸 margen lateral 60px */
+  display: flex;
+  justify-content: center;
 }
 
 .inner {
   max-width: 1180px;
+  width: 100%;
   margin: 0 auto;
-}
-
-.header {
   text-align: center;
-  margin-bottom: 40px;
 }
 
+/* Pill tipo “PARTNERS DEL CLUB” */
 .kicker {
   display: inline-flex;
-  padding: 4px 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 26px;
   border-radius: 999px;
   font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  background: rgba(255, 106, 0, 0.12);
+  border: 1px solid rgba(255, 155, 58, 0.6);
+  background: rgba(255, 106, 0, 0.08);
   color: #ff9b3a;
-  border: 1px solid rgba(255, 155, 58, 0.4);
-  margin-bottom: 10px;
+  margin: 0 auto -55px;
 }
 
 .title {
-  color: #ff6a00;
-  font-size: 2.2rem;
+  color: #ffffff;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
+/* Contenido en 2 columnas */
 .content {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: center;
-  gap: 32px;
-  flex-wrap: nowrap;
-}
-
-.imageBox {
-  position: relative;
-  flex: 1 1 380px;
-  max-width: 520px;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: #050505;
-}
-
-.photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.02);
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.imageBox:hover .photo {
-  transform: scale(1.06);
-  filter: brightness(1.05);
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: left; /* el texto del párrafo a la izquierda */
 }
 
 .textBox {
-  flex: 1 1 360px;
+  flex: 1;
+  min-width: 300px;
   max-width: 520px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
-  color: #e3e3e3;
-  text-align: left;
+  color: #dcdcdc;
 }
 
-.textBox p {
-  margin-bottom: 14px;
+.mapBox {
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+  height: 320px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.textBox p:last-child {
-  margin-bottom: 0;
+.mapBox iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-@media (max-width: 1024px) {
+.cookieMessage {
+  color: #ff9b3a;
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
   .pavilionSection {
-    padding: 64px 20px 72px;
+    padding: 60px 30px;
   }
 
-  .content {
-    gap: 24px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
   .content {
     flex-direction: column;
     align-items: center;
-  }
-
-  .imageBox {
-    width: 100%;
-    max-width: 460px;
+    text-align: center;
   }
 
   .textBox {
-    max-width: 600px;
-    text-align: center;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .mapBox {
+    max-width: 100%;
+    height: 300px;
   }
 }
 
+/* Mòbil */
 @media (max-width: 480px) {
   .pavilionSection {
-    padding: 56px 16px 64px;
+    padding: 50px 20px;
   }
 
   .title {
-    font-size: 1.8rem;
-  }
-
-  .imageBox {
-    max-width: 100%;
-  }
-
-  .textBox {
-    font-size: 0.95rem;
+    font-size: 1.9rem;
   }
 }
