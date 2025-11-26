@@ -47,20 +47,29 @@
   text-decoration: none;
 }
 
-.right a:hover,
-.link:hover {
-  color: #ff7a1a;
-}
-
+/* estado normal + visitado */
+.link:link,
 .link:visited,
+.touchTarget:link,
 .touchTarget:visited {
   color: #f5f5f5;
 }
 
+/* hover / focus */
+.right a:hover,
+.link:hover,
+.touchTarget:hover,
+.link:focus-visible,
+.touchTarget:focus-visible {
+  color: #ff7a1a;
+}
+
+/* active (click presionado) */
 .link:active,
 .touchTarget:active {
   color: #ff9b3a;
 }
+
 
 @media (max-width: 767px) {
   .footer {
