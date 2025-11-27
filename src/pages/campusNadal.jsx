@@ -38,7 +38,7 @@ export default function CampusNadalPage() {
               </div>
 
               <a
-                href="https://link-torn1.com"
+                href="https://app.cluber.es/legacy/clubes/681b2342a341f966364486/pagos/691caa7ee98aa513080352"
                 target="_blank"
                 className={styles.linkBtn}
               >
@@ -63,7 +63,7 @@ export default function CampusNadalPage() {
               </div>
 
               <a
-                href="https://link-torn2.com"
+                href="https://app.cluber.es/legacy/clubes/681b2342a341f966364486/pagos/691cab1290760016417658"
                 target="_blank"
                 className={styles.linkBtn}
               >
