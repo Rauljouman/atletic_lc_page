@@ -12,7 +12,6 @@
 }
 
 /* Pill superior */
-
 .kicker {
   display: inline-flex;
   align-items: center;
@@ -41,7 +40,6 @@
 }
 
 /* Filtres i buscador */
-
 .filtros {
   display: flex;
   flex-direction: column;
@@ -57,6 +55,7 @@
   justify-content: center;
 }
 
+/* 🔹 INPUT + SELECT base */
 .filtros input,
 .filtros select {
   padding: 10px 14px;
@@ -71,14 +70,20 @@
   transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.filtros select {
-  height: 42px;
-}
-
 .filtros input::placeholder {
   color: #aaaaaa;
 }
 
+/* 🔹 SELECT sin flecha nativa + espacio para flecha custom */
+.filtros select {
+  height: 42px;
+  padding-right: 40px;            /* espacio para la flecha */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Estado focus */
 .filtros input:focus,
 .filtros select:focus {
   border-color: #ff6a00;
@@ -86,8 +91,24 @@
   box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.4);
 }
 
-/* Grid d’equips */
+/* 🔹 WRAPPER del select + flecha custom */
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+}
 
+.selectWrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #ff7a1a;
+  font-size: 0.9rem;
+}
+
+/* Grid d’equips */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -96,7 +117,6 @@
 }
 
 /* Responsive */
-
 @media (max-width: 1024px) {
   .teamsSection {
     padding: 60px 40px;
