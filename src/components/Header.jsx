@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import styles from "./Header.module.css";
 
@@ -75,12 +74,6 @@ export default function Header() {
 
       <header className={styles.header}>
         <div className={styles.left}>
-          <a href="mailto:coordinacion.atlcfs@gmail.com" title="Correu electrònic">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
-          <a href="tel:+34678677719" title="Telèfon">
-            <FontAwesomeIcon icon={faPhone} />
-          </a>
 
           <Link href="/" aria-label="Anar a l'inici" className={styles.logo}>
             <Image

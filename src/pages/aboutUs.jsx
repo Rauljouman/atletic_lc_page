@@ -21,18 +21,20 @@ export default function AboutUs() {
 
           <div className={styles.card}>
             <h3 className={styles.sectionTitle}>La nostra història</h3>
+
             <p>
               L’Atlètic Les Corts neix l’any <strong>2017</strong> fruit de la
-              fusió entre dos clubs del barri: <strong>Sang Culer Cor Català</strong>{" "}
-              i <strong>Corsica Futsal</strong>. Amb aquesta unió, el projecte
+              fusió entre dos clubs del barri:{" "}
+              <strong>Sang Culer Cor Català</strong> i{" "}
+              <strong>Corsica Futsal</strong>. Amb aquesta unió, el projecte
               va adquirir una identitat sòlida i profundament arrelada a Les Corts.
             </p>
 
+            {/* 🔄 PÁRRAFO ACTUALIZADO CON LOS EQUIPOS QUE TENIU ARA */}
             <p>
               Per a la temporada <strong>2025–2026</strong>, el club comptarà amb{" "}
-              <strong>8 equips de base</strong> (Aleví; Infantil A, B i C; Cadet A,
-              B i C; i Juvenil A), <strong>3 equips sèniors</strong> (Sènior A, B, C)
-              i <strong>1 equip veterà</strong>.
+              <strong>6 equips de base</strong> (Aleví A, Infantil A, Cadet A, B i C
+              i Juvenil A) i <strong>3 equips sèniors</strong> (Sènior A, B i C).
             </p>
 
             <p>
@@ -81,7 +83,8 @@ export default function AboutUs() {
                   a la temporada 2026–2027.
                 </li>
                 <li>
-                  Objectiu 2030: arribar als <strong>220 esportistes federats</strong>.
+                  Objectiu 2030: arribar als{" "}
+                  <strong>220 esportistes federats</strong>.
                 </li>
               </ul>
             </div>

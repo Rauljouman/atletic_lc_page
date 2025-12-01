@@ -1,7 +1,6 @@
-/* HERO – Ocupa toda la pantalla teniendo en cuenta el header fijo */
-
+/* HERO general */
 .hero {
-  min-height: calc(100vh); /* pantalla - header desktop */
+  min-height: calc(100vh);
   padding: 96px 56px 72px;
   box-sizing: border-box;
   background: #050505;
@@ -15,19 +14,17 @@
   margin-top: 30px;
 }
 
-/* Contenedor principal */
-
+/* GRID principal */
 .container {
   max-width: 1180px;
   margin: 0 auto;
-  margin-left: 70px;
+  margin-left: 80px;
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   align-items: center;
 }
 
-/* Bloque de texto izquierda */
-
+/* Texto */
 .textBlock {
   display: flex;
   flex-direction: column;
@@ -40,7 +37,6 @@
   padding: 6px 24px;
   border-radius: 999px;
   font-size: 0.8rem;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
   background: rgba(255, 106, 0, 0.1);
   color: #ff9b3a;
@@ -68,29 +64,19 @@
   margin-top: 8px;
 }
 
-/* Botones CTA */
-
+/* Botones */
 .primaryBtn,
 .secondaryBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 10px 20px;
   border-radius: 999px;
-
   font-size: 0.95rem;
   font-weight: 600;
-
-  text-decoration: none;
   cursor: pointer;
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    background 0.15s ease,
-    border-color 0.15s ease,
-    color 0.15s ease;
+  text-decoration: none;
+  transition: 0.15s ease;
 }
 
 .primaryBtn {
@@ -99,35 +85,21 @@
   box-shadow: 0 6px 18px rgba(255, 106, 0, 0.35);
 }
 
-.primaryBtn:hover {
-  box-shadow: 0 10px 26px rgba(255, 106, 0, 0.55);
-  transform: translateY(-1px);
-}
-
 .secondaryBtn {
   background: transparent;
   color: #f5f5f5;
   border: 1px solid rgba(245, 245, 245, 0.35);
 }
 
-.secondaryBtn:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.55);
-  transform: translateY(-1px);
-}
-
-/* Imagen derecha */
-
+/* Imagen lado derecho */
 .imageSide {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-right: 60px;
 }
 
-/* Halo naranja detrás */
-
+/* Halo */
 .halo {
   position: absolute;
   width: 480px;
@@ -135,10 +107,8 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(255, 106, 0, 0.28) 0%,
-    rgba(255, 106, 0, 0.18) 25%,
-    rgba(255, 106, 0, 0.08) 50%,
-    transparent 75%
+    rgba(255, 106, 0, 0.28),
+    transparent 70%
   );
   filter: blur(70px);
   top: 50%;
@@ -148,79 +118,48 @@
   z-index: 0;
 }
 
-/* Marco de la foto */
-
+/* === TAMAÑO FIJO DESKTOP === */
 .imageFrame {
   position: relative;
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 4 / 3;
-
+  width: 420px;   /* ancho fijo */
+  height: 430px;  /* alto fijo */
   border-radius: 26px;
   overflow: hidden;
-
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: #111;
-
   z-index: 1;
+  background: #111;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
 }
 
 .photo {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Tablet (≤ 1024px) */
-
-/* Tablet (≤ 1024px) */
+/* Tablet horizontal ≤ 1024px */
 @media (max-width: 1024px) {
-  .hero {
-    /* quitamos altura forzada y ajustamos paddings */
-    min-height: auto;
-    padding: 110px 16px 36px; /* más espacio arriba, menos abajo */
-  }
-
-  .container {
-    max-width: 960px;
-    gap: 32px;
-    margin-right: 50px;
-  }
-
-  .title {
-    font-size: clamp(2.1rem, 2.5vw + 1rem, 2.6rem);
-  }
-
-  .pill {
-    margin-bottom: 16px; /* más separación respecto al título */
-  }
-
   .imageFrame {
-    max-width: 380px;
+    width: 380px;
+    height: 240px;
   }
 }
 
-/* Tablet vertical / móvil grande (≤ 768px) */
+/* Tablet vertical / móvil grande ≤ 768px */
 @media (max-width: 768px) {
-  .hero {
-    /* también aquí sin 100vh para evitar hueco vacío */
-    min-height: auto;
-    padding: 110px 16px 32px;
-  }
-
   .container {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 28px;
     margin: 0 auto;
   }
 
   .imageSide {
-    order: -1;
+    order: 2;
     margin: 0;
-    margin-top: 25px;
   }
 
   .imageFrame {
-    max-width: 360px;
+    width: 320px;
+    height: 200px;
     margin: 0 auto;
   }
 
@@ -228,36 +167,13 @@
     text-align: center;
     align-items: center;
   }
-
-  .pill {
-    align-self: center;
-    margin-bottom: 16px; /* misma separación en vertical */
-  }
-
-  .subtitle {
-    max-width: 100%;
-  }
-  .ctas {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 12px; /* separación bonita */
-  }
-
-  .primaryBtn,
-  .secondaryBtn {
-    width: 260px;      /* 👈 tamaño idéntico para ambos */
-    max-width: 40%;    /* evita que se rompa en móviles muy pequeños */
-  }
-
 }
 
-
-/* Móvil pequeño (≤ 480px) */
-
+/* Móvil pequeño ≤ 480px */
 @media (max-width: 480px) {
-  .hero {
-    padding: 72px 14px 40px;
+  .imageFrame {
+    width: 260px;
+    height: 160px;
   }
 
   .ctas {
@@ -268,9 +184,5 @@
   .primaryBtn,
   .secondaryBtn {
     width: 100%;
-  }
-
-  .imageFrame {
-    max-width: 320px;
   }
 }
