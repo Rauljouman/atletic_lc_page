@@ -4,9 +4,11 @@ import { useState, useEffect } from "react";
 
 export default function Presentation() {
   const images = [
-    "/assets/carrusel_foto/foto1.jpeg",
-    "/assets/carrusel_foto/foto2.jpeg",
-    "/assets/carrusel_foto/foto4.jpeg"
+    "/assets/carrusel_presentacion/foto1.jpeg",
+    "/assets/carrusel_presentacion/foto2.jpeg",
+    "/assets/carrusel_presentacion/foto3.jpeg",
+    "/assets/carrusel_presentacion/foto4.jpeg",
+    "/assets/carrusel_presentacion/foto5.jpeg"
   ];
 
   const [current, setCurrent] = useState(0);
