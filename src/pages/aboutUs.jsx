@@ -39,7 +39,7 @@ export default function AboutUs() {
 
             <p>
               En total, som una entitat formada per{" "}
-              <strong>155 esportistes federats</strong> dins de la Federació Catalana
+              <strong>124 esportistes federats</strong> dins de la Federació Catalana
               de Futbol. El nostre objectiu institucional és formar persones abans
               que esportistes, promovent valors com el respecte, l’esforç i el
               compromís.
