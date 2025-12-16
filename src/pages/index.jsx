@@ -3,7 +3,6 @@ import PavilionSection from "@/components/PavilionSection";
 import ContactForm from "@/components/ContactForm";
 import Presentation from "@/components/Presentation";
 import Sponsor from "@/components/Sponsor";
-import CampusPromo from "@/components/CampusPromo";
 
 export default function Home() {
   return (
@@ -66,7 +65,6 @@ export default function Home() {
       </Head>
 
       <main>
-        <CampusPromo />
         <Presentation />
         <Sponsor />
         <PavilionSection />
