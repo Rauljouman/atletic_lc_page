@@ -1,7 +1,7 @@
 /* HERO general */
 .hero {
-  min-height: calc(100vh);
-  padding: 96px 56px 72px;
+  min-height: 100vh;
+  padding: 96px 0 72px;
   box-sizing: border-box;
   background: #050505;
   background-image: radial-gradient(
@@ -12,16 +12,22 @@
   background-repeat: no-repeat;
   color: #f5f5f5;
   margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-/* GRID principal */
+/* GRID principal - Escritorio Base (Portátil) */
 .container {
-  max-width: 1180px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  margin-left: 80px;
+  padding-left: 80px;
+  padding-right: 60px;
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* Texto */
@@ -96,10 +102,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-right: 60px;
 }
 
-/* Halo */
 .halo {
   position: absolute;
   width: 480px;
@@ -118,11 +122,10 @@
   z-index: 0;
 }
 
-/* === TAMAÑO FIJO DESKTOP === */
 .imageFrame {
   position: relative;
-  width: 420px;   /* ancho fijo */
-  height: 430px;  /* alto fijo */
+  width: 420px;
+  height: 430px;
   border-radius: 26px;
   overflow: hidden;
   z-index: 1;
@@ -136,78 +139,61 @@
   object-fit: cover;
 }
 
-/* Tablet horizontal ≤ 1024px */
-@media (max-width: 1024px) {
-  .hero {
-    /* que no esté obligado a ocupar toda la pantalla para evitar tanto hueco negro */
-    min-height: auto;
-    padding: 80px 32px 56px;
+/* === TAMAÑO EXCLUSIVO PARA MONITOR (Ajuste de texto extra grande) === */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1650px;
+    padding-left: 100px;
+    padding-right: 80px;
+    gap: 80px; 
   }
 
-  .container {
-    /* centramos el bloque, sin desplazamiento a la derecha */
-    margin: 0 auto;
+  .title {
+    font-size: 5.2rem; /* Texto del título aún más grande */
+    line-height: 1.02;
+  }
+
+  .subtitle {
+    font-size: 1.4rem; /* Texto del subtítulo más grande */
+    max-width: 750px;
+    margin-bottom: 10px;
   }
 
   .imageFrame {
-    width: 380px;
-    height: 340px;
-  }
-}
-
-/* Tablet vertical / móvil grande ≤ 768px */
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto;
-    padding: 80px 16px 40px;
+    width: 580px; 
+    height: 600px;
   }
 
-  .container {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    margin: 0 auto;
-  }
-
-  .imageSide {
-    order: 2;
-    margin: 0;
-  }
-
-  .imageFrame {
-    width: 320px;
-    height: 400px;
-    margin: 0 auto;
-  }
-
-  .textBlock {
-    text-align: center;
-    align-items: center;
-  }
-
-  /* centramos la pill en móvil/tablet vertical */
   .pill {
-    align-self: center;
+    font-size: 1.1rem;
+    padding: 10px 35px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    padding: 14px 32px;
+    font-size: 1.1rem;
   }
 }
 
-/* Móvil pequeño ≤ 480px */
+/* === RESPONSIVE ORIGINAL (SIN TOCAR) === */
+@media (max-width: 1024px) {
+  .hero { min-height: auto; padding: 80px 32px 56px; }
+  .container { margin: 0 auto; padding: 0; }
+  .imageFrame { width: 380px; height: 340px; }
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: auto; padding: 80px 16px 40px; }
+  .container { grid-template-columns: 1fr; gap: 28px; margin: 0 auto; padding: 0; }
+  .imageSide { order: 2; margin: 0; }
+  .imageFrame { width: 320px; height: 400px; margin: 0 auto; }
+  .textBlock { text-align: center; align-items: center; }
+  .pill { align-self: center; }
+}
+
 @media (max-width: 480px) {
-  .hero {
-    padding: 72px 14px 32px;
-  }
-
-  .imageFrame {
-    width: 260px;
-    height: 260px;
-  }
-
-  .ctas {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .primaryBtn,
-  .secondaryBtn {
-    width: 100%;
-  }
+  .hero { padding: 72px 14px 32px; }
+  .imageFrame { width: 260px; height: 260px; }
+  .ctas { flex-direction: column; width: 100%; }
+  .primaryBtn, .secondaryBtn { width: 100%; }
 }

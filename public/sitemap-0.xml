@@ -38,14 +38,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- CAMPUS NADAL -->
-  <url>
-    <loc>https://www.atletic-les-corts.com/campus-nadal</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <!-- AVÍS LEGAL -->
   <url>
     <loc>https://www.atletic-les-corts.com/legal-notice</loc>
