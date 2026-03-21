@@ -1,8 +1,7 @@
-/* HERO – Ocupa toda la pantalla teniendo en cuenta el header fijo */
-
+/* HERO general */
 .hero {
-  min-height: calc(100vh - 72px); /* pantalla - header desktop */
-  padding: 96px 56px 72px;
+  min-height: 100vh;
+  padding: 96px 0 72px;
   box-sizing: border-box;
   background: #050505;
   background-image: radial-gradient(
@@ -12,21 +11,26 @@
   );
   background-repeat: no-repeat;
   color: #f5f5f5;
-}
-
-/* Contenedor principal */
-
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  margin-left: 70px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
   align-items: center;
 }
 
-/* Bloque de texto izquierda */
+/* GRID principal - Escritorio Base (Portátil) */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  box-sizing: border-box;
+}
 
+/* Texto */
 .textBlock {
   display: flex;
   flex-direction: column;
@@ -39,7 +43,6 @@
   padding: 6px 24px;
   border-radius: 999px;
   font-size: 0.8rem;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
   background: rgba(255, 106, 0, 0.1);
   color: #ff9b3a;
@@ -67,29 +70,19 @@
   margin-top: 8px;
 }
 
-/* Botones CTA */
-
+/* Botones */
 .primaryBtn,
 .secondaryBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 10px 20px;
   border-radius: 999px;
-
   font-size: 0.95rem;
   font-weight: 600;
-
-  text-decoration: none;
   cursor: pointer;
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    background 0.15s ease,
-    border-color 0.15s ease,
-    color 0.15s ease;
+  text-decoration: none;
+  transition: 0.15s ease;
 }
 
 .primaryBtn {
@@ -98,34 +91,18 @@
   box-shadow: 0 6px 18px rgba(255, 106, 0, 0.35);
 }
 
-.primaryBtn:hover {
-  box-shadow: 0 10px 26px rgba(255, 106, 0, 0.55);
-  transform: translateY(-1px);
-}
-
 .secondaryBtn {
   background: transparent;
   color: #f5f5f5;
   border: 1px solid rgba(245, 245, 245, 0.35);
 }
 
-.secondaryBtn:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.55);
-  transform: translateY(-1px);
-}
-
-/* Imagen derecha */
-
+/* Imagen lado derecho */
 .imageSide {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-right: 60px;
 }
-
-/* Halo naranja detrás */
 
 .halo {
   position: absolute;
@@ -134,10 +111,8 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(255, 106, 0, 0.28) 0%,
-    rgba(255, 106, 0, 0.18) 25%,
-    rgba(255, 106, 0, 0.08) 50%,
-    transparent 75%
+    rgba(255, 106, 0, 0.28),
+    transparent 70%
   );
   filter: blur(70px);
   top: 50%;
@@ -147,129 +122,78 @@
   z-index: 0;
 }
 
-/* Marco de la foto */
-
 .imageFrame {
   position: relative;
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 4 / 3;
-
+  width: 420px;
+  height: 430px;
   border-radius: 26px;
   overflow: hidden;
-
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: #111;
-
   z-index: 1;
+  background: #111;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
 }
 
 .photo {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Tablet (≤ 1024px) */
-
-/* Tablet (≤ 1024px) */
-@media (max-width: 1024px) {
-  .hero {
-    /* quitamos altura forzada y ajustamos paddings */
-    min-height: auto;
-    padding: 110px 16px 36px; /* más espacio arriba, menos abajo */
-  }
-
+/* === TAMAÑO EXCLUSIVO PARA MONITOR (Ajuste de texto extra grande) === */
+@media (min-width: 1400px) {
   .container {
-    max-width: 960px;
-    gap: 32px;
-    margin-right: 50px;
+    max-width: 1650px;
+    padding-left: 100px;
+    padding-right: 80px;
+    gap: 80px; 
   }
 
   .title {
-    font-size: clamp(2.1rem, 2.5vw + 1rem, 2.6rem);
-  }
-
-  .pill {
-    margin-bottom: 16px; /* más separación respecto al título */
-  }
-
-  .imageFrame {
-    max-width: 380px;
-  }
-}
-
-/* Tablet vertical / móvil grande (≤ 768px) */
-@media (max-width: 768px) {
-  .hero {
-    /* también aquí sin 100vh para evitar hueco vacío */
-    min-height: auto;
-    padding: 110px 16px 32px;
-  }
-
-  .container {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
-    margin: 0 auto;
-  }
-
-  .imageSide {
-    order: -1;
-    margin: 0;
-    margin-top: 25px;
-  }
-
-  .imageFrame {
-    max-width: 360px;
-    margin: 0 auto;
-  }
-
-  .textBlock {
-    text-align: center;
-    align-items: center;
-  }
-
-  .pill {
-    align-self: center;
-    margin-bottom: 16px; /* misma separación en vertical */
+    font-size: 5.2rem; /* Texto del título aún más grande */
+    line-height: 1.02;
   }
 
   .subtitle {
-    max-width: 100%;
-  }
-  .ctas {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 12px; /* separación bonita */
-  }
-
-  .primaryBtn,
-  .secondaryBtn {
-    width: 260px;      /* 👈 tamaño idéntico para ambos */
-    max-width: 40%;    /* evita que se rompa en móviles muy pequeños */
-  }
-
-}
-
-
-/* Móvil pequeño (≤ 480px) */
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 72px 14px 40px;
-  }
-
-  .ctas {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .primaryBtn,
-  .secondaryBtn {
-    width: 100%;
+    font-size: 1.4rem; /* Texto del subtítulo más grande */
+    max-width: 750px;
+    margin-bottom: 10px;
   }
 
   .imageFrame {
-    max-width: 320px;
+    width: 580px; 
+    height: 600px;
   }
+
+  .pill {
+    font-size: 1.1rem;
+    padding: 10px 35px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+  }
+}
+
+/* === RESPONSIVE ORIGINAL (SIN TOCAR) === */
+@media (max-width: 1024px) {
+  .hero { min-height: auto; padding: 80px 32px 56px; }
+  .container { margin: 0 auto; padding: 0; }
+  .imageFrame { width: 380px; height: 340px; }
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: auto; padding: 80px 16px 40px; }
+  .container { grid-template-columns: 1fr; gap: 28px; margin: 0 auto; padding: 0; }
+  .imageSide { order: 2; margin: 0; }
+  .imageFrame { width: 320px; height: 400px; margin: 0 auto; }
+  .textBlock { text-align: center; align-items: center; }
+  .pill { align-self: center; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 72px 14px 32px; }
+  .imageFrame { width: 260px; height: 260px; }
+  .ctas { flex-direction: column; width: 100%; }
+  .primaryBtn, .secondaryBtn { width: 100%; }
 }

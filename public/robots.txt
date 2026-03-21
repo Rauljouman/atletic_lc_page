@@ -1,9 +1,13 @@
-# *
+# --- DIRECTIVES GLOBALS ---
 User-agent: *
 Allow: /
 
-# Host
+# Impedir l'accés a carpetes internes tècniques de Next.js (opcional però recomanat)
+Disallow: /_next/
+Disallow: /api/
+
+# --- HOST (opcional per a SEO internacional, però no fa mal) ---
 Host: https://www.atletic-les-corts.com
 
-# Sitemaps
+# --- SITEMAP ---
 Sitemap: https://www.atletic-les-corts.com/sitemap.xml
