@@ -11,7 +11,6 @@ const NAV_LINKS = [
   { href: "/", label: "Inici" },
   { href: "/teams", label: "Equips" },
   { href: "/aboutUs", label: "Sobre nosaltres" },
-  { href: "/contact", label: "Contacte" },
 ];
 
 export default function Header() {
