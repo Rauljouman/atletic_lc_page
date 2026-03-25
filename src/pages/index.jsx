@@ -17,7 +17,7 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://atletic-lc-page.vercel.app/" />
+        <link rel="canonical" href="https://www.atletic-les-corts.com/" />
 
         {/* RENDIMENT / FONTS */}
         <link rel="preload" as="image" href="/assets/campo.jpg" />
